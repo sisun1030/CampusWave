@@ -1,14 +1,7 @@
 JT AND SISUN dddddddaaaaaaaaa - BBBBBBB
 
-
-
-
-
-
-
-
-
-
+Function A:
+- Sisun's stuff
 function B
 {
 	start working fucker!
