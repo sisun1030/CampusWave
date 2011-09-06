@@ -49,7 +49,8 @@ scheduler.config={
 	
 	lightbox:{
 		sections:[	{name:"description", height:200, map_to:"text", type:"textarea" , focus:true},
-					{name:"time", height:72, type:"time", map_to:"auto"}	]
+					{name:"time", height:72, type:"time", map_to:"auto"},
+					{name:"organizer", height:100, type:"textarea", map_to:"text"}]
 	}
 };
 scheduler.templates={}
