@@ -18,6 +18,8 @@ scheduler.locale={
 		icon_delete:"Delete",
 		confirm_closing:"",//Your changes will be lost, are your sure ?
 		confirm_deleting:"Event will be deleted permanently, are you sure?",
+		section_eventtype:"Event Type",
+		section_organizer:"Organizer",
 		section_description:"Description",
 		section_time:"Time period",
 		full_day:"Full day",

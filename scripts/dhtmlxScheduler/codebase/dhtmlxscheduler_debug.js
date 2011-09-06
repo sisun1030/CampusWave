@@ -2591,6 +2591,7 @@ scheduler.locale={
 		confirm_deleting:"Event will be deleted permanently, are you sure?",
 		section_description:"Description",
 		section_time:"Time period",
+			section_eventtype:"Event Type",section_organizer:"Organizer",
 		full_day:"Full day",
 		
 		/*recurring events*/
