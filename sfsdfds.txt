@@ -4,5 +4,5 @@ Function A:
 - Sisun's stuff
 function B
 {
-	start working fucker!
+	Sisun is god
 }
