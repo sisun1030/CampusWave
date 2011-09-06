@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:export    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+
+
+<h2><a name="export_data_from_the_scheduler" id="export_data_from_the_scheduler">Export data from the scheduler</a></h2>
+<div class="level2">
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="99-144" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Export data from the scheduler" /></div></form></div>
+<h3><a name="base_prepartions" id="base_prepartions">Base prepartions</a></h3>
+<div class="level3">
+
+<p>
+
+To activate such functionality you need to include dhtmlxscheduler_serialize.js
+</p>
+<pre class="code html4strict">&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">'codebase/ext/dhtmlxscheduler_serialize.js'</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="145-348" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Base prepartions" /></div></form></div>
+<h3><a name="export_to_xml" id="export_to_xml">Export to XML</a></h3>
+<div class="level3">
+
+<p>
+
+You may use the <a href="dhtmlxscheduler___api_method_dhtmlxscheduler_toxml.html" class="wikilink1" title="dhtmlxscheduler:api_method_dhtmlxscheduler_toxml">toXML</a> method to serialize scheduler data to xml string:
+</p>
+<pre class="code javascript">&nbsp;
+<span class="kw2">var</span> xml <span class="sy0">=</span> scheduler.<span class="me1">toXML</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1">//xm string</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="349-559" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Export to XML" /></div></form></div>
+<h3><a name="export_to_json" id="export_to_json">Export to JSON</a></h3>
+<div class="level3">
+
+<p>
+
+It is also possible to get scheduler events in JSON format. Use <a href="dhtmlxscheduler___api_method_dhtmlxscheduler_tojson.html" class="wikilink1" title="dhtmlxscheduler:api_method_dhtmlxscheduler_tojson">toJSON</a> in this case: 
+</p>
+<pre class="code javascript">&nbsp;
+<span class="kw2">var</span> json_string <span class="sy0">=</span> scheduler.<span class="me1">toJSON</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1">//json string</span></pre>
+<p>
+<strong>Warning</strong> - method returns json string, not object. If you need an object - use <a href="dhtmlxscheduler___api_method_dhtmlxscheduler_getevents.html" class="wikilink1" title="dhtmlxscheduler:api_method_dhtmlxscheduler_getevents">getEvents</a> method
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="560-942" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Export to JSON" /></div></form></div>
+<h3><a name="export_to_ical" id="export_to_ical">Export to iCal</a></h3>
+<div class="level3">
+
+<p>
+
+Serialization to iCal string requires <a href="dhtmlxscheduler___api_method_dhtmlxscheduler_toical.html" class="wikilink1" title="dhtmlxscheduler:api_method_dhtmlxscheduler_toical">toICal</a> method. The next command and both methods, that are described above, can be used at any moment of time. 
+</p>
+<pre class="code javascript">&nbsp;
+<span class="kw2">var</span> ical_string <span class="sy0">=</span> scheduler.<span class="me1">toICal</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="943-1231" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Export to iCal" /></div></form></div>
+<h3><a name="attributes_in_serialization" id="attributes_in_serialization">Attributes in serialization</a></h3>
+<div class="level3">
+
+<p>
+
+The following technique is not applicable for the iCal format. 
+</p>
+
+<p>
+By default export will include only standard attributes(properties)
+
+</p>
+<ol>
+<li class="level1"><div class="li"> id</div>
+</li>
+</ol>
+<ol>
+<li class="level1"><div class="li"> text</div>
+</li>
+</ol>
+<ol>
+<li class="level1"><div class="li"> start_date - format of seriaization is defined by scheduler.config.xml_date</div>
+</li>
+</ol>
+<ol>
+<li class="level1"><div class="li"> end_date</div>
+</li>
+</ol>
+
+<p>
+
+If you need to include some custom attributes, you can redefine data_attributes method, in simplest case it will look as
+</p>
+<pre class="code javascript">&nbsp;
+scheduler.<span class="me1">data_attributes</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+&nbsp;
+	<span class="kw1">return</span> <span class="br0">&#91;</span>
+&nbsp;
+		<span class="br0">&#91;</span><span class="st0">&quot;id&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span><span class="br0">&#91;</span><span class="st0">&quot;text&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span><span class="br0">&#91;</span><span class="st0">&quot;date_start&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span><span class="br0">&#91;</span><span class="st0">&quot;date_end&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+		<span class="br0">&#91;</span><span class="st0">&quot;custom_attribute&quot;</span><span class="br0">&#93;</span>
+&nbsp;
+	<span class="br0">&#93;</span>;
+&nbsp;
+<span class="br0">&#125;</span>;</pre>
+<p>
+Basically, the method defines the list of attirubute names. 
+</p>
+
+<p>
+
+But you can define the formatting function, which describes how attribute data needs being processed before serialization.
+</p>
+
+<p>
+It can be useful for dates those need converting before to be placed in <acronym title="Extensible Markup Language">XML</acronym>
+</p>
+<pre class="code javascript">&nbsp;
+scheduler.<span class="me1">data_attributes</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+&nbsp;
+<span class="kw1">return</span> <span class="br0">&#91;</span>
+&nbsp;
+	<span class="br0">&#91;</span><span class="st0">&quot;id&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+	<span class="br0">&#91;</span><span class="st0">&quot;text&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+	<span class="br0">&#91;</span><span class="st0">&quot;start_date&quot;</span><span class="sy0">,</span>scheduler.<span class="me1">templates</span>.<span class="me1">xml_format</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+	<span class="br0">&#91;</span><span class="st0">&quot;end_date&quot;</span><span class="sy0">,</span>scheduler.<span class="me1">templates</span>.<span class="me1">xml_format</span><span class="br0">&#93;</span><span class="br0">&#93;</span>;
+&nbsp;
+<span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1232-2279" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Attributes in serialization" /></div></form></div>
+<h3><a name="serializing_recurring_events" id="serializing_recurring_events">Serializing recurring events</a></h3>
+<div class="level3">
+
+<p>
+
+Below technique is not applicable for the iCal format. 
+</p>
+
+<p>
+If you are using “recurring” extension, you need to define extra attributes, which are used by recurring events
+</p>
+<pre class="code javascript">&nbsp;
+scheduler.<span class="me1">data_attributes</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+&nbsp;
+    <span class="kw2">var</span> empty <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span>a<span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="kw1">return</span> a||<span class="st0">&quot;&quot;</span>; <span class="br0">&#125;</span>
+&nbsp;
+    <span class="kw1">return</span> <span class="br0">&#91;</span><span class="br0">&#91;</span><span class="st0">&quot;id&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;text&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;start_date&quot;</span><span class="sy0">,</span>scheduler.<span class="me1">templates</span>.<span class="me1">xml_format</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;end_date&quot;</span><span class="sy0">,</span>scheduler.<span class="me1">templates</span>.<span class="me1">xml_format</span><span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;rec_type&quot;</span><span class="sy0">,</span>empty<span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;event_length&quot;</span><span class="sy0">,</span>empty<span class="br0">&#93;</span><span class="sy0">,</span>
+&nbsp;
+			<span class="br0">&#91;</span><span class="st0">&quot;event_pid&quot;</span><span class="sy0">,</span>empty<span class="br0">&#93;</span><span class="br0">&#93;</span>;
+&nbsp;
+<span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="2280-2830" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Serializing recurring events" /></div></form></div>
+<h3><a name="db-less_data_saving" id="db-less_data_saving">DB-less data saving</a></h3>
+<div class="level3">
+
+<p>
+
+Serialization allows to implement the simple routine of data saving, which doesn&#039;t require DB - data will be stored in <acronym title="Extensible Markup Language">XML</acronym> file. 
+</p>
+
+<p>
+(1) Firstly, you need to include serialization extension
+</p>
+<pre class="code html4strict">&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">'codebase/ext/dhtmlxscheduler_serialize.js'</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+<p>
+(2) The next step - place hidden form for data saving
+</p>
+<pre class="code html4strict">&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;xml_form&quot;</span> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;xml_writer.php&quot;</span> <span class="kw3">method</span><span class="sy0">=</span><span class="st0">&quot;post&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;hidden_frame&quot;</span> <span class="kw3">accept-charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+&nbsp;
+	<span class="sc2">&lt;<a href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;hidden&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;data&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;data&quot;</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a>&gt;</span></pre>
+<p>
+(3) Then you need to place “Save” button on the page
+</p>
+<pre class="code html4strict">&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;button&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;save&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;save&quot;</span> <span class="kw3">onclick</span><span class="sy0">=</span><span class="st0">&quot;save()&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;right:300px; width:80px; position:absolute; top:1px;&quot;</span>&gt;</span></pre><pre class="code javascript">&nbsp;
+<span class="kw2">function</span> save<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+&nbsp;
+	<span class="kw2">var</span> form <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;xml_form&quot;</span><span class="br0">&#41;</span>;
+&nbsp;
+	form.<span class="me1">elements</span>.<span class="me1">data</span>.<span class="me1">value</span> <span class="sy0">=</span> scheduler.<span class="me1">toXML</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&nbsp;
+	form.<span class="me1">submit</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+&nbsp;
+<span class="br0">&#125;</span></pre>
+<p>
+(4) on server side, you just need to write the data in an existent file. xml_writer.php could be as follows:
+</p>
+<pre class="code php">&nbsp;
+<span class="kw2">&lt;?php</span>
+&nbsp;
+	file_put_contents<span class="br0">&#40;</span><span class="st0">&quot;./data.xml&quot;</span><span class="sy0">,</span><span class="re0">$_POST</span><span class="br0">&#91;</span><span class="st0">&quot;data&quot;</span><span class="br0">&#93;</span><span class="br0">&#41;</span>;
+&nbsp;
+<span class="kw2">?&gt;</span></pre>
+<p>
+the empty data.xml is:
+</p>
+<pre class="code xml">&nbsp;
+<span class="sc3"><span class="re1">&lt;data<span class="re2">&gt;</span></span><span class="re1">&lt;/data<span class="re2">&gt;</span></span></span></pre>
+<p>
+That is all, now scheduler can be loaded from data.xml, pressing “save” button will serialize the current state of the scheduler to xml and save back to the file. 
+</p>
+
+<p>
+So on next loading the scheduler will load events those have been saved  previously. 
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="2831-4282" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="DB-less data saving" /></div></form></div>
+<h3><a name="related_samples" id="related_samples">Related samples</a></h3>
+<div class="level3">
+
+<p>
+
+In the scheduler package you can find ready samples:
+
+</p>
+<ul>
+<li class="level1"><div class="li"> dhtmlxScheduler\samples\04_export\01_serialize_xml.html </div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> dhtmlxScheduler\samples\04_export\02_serialize_json.html </div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> dhtmlxScheduler\samples\04_export\03_serialize_ical.html </div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> dhtmlxScheduler\samples\04_export\05_serialize_recurring.html </div>
+</li>
+</ul>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="4283-4623" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Related samples" /></div></form></div>
+<h3><a name="troubleshooting" id="troubleshooting">Troubleshooting</a></h3>
+<div class="level3">
+
+<p>
+
+If, during data saving, you encounter unwanted data escaping (\” in the saved data) - be sure that “magic_quotes” is disabled in php configuration. 
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="4624-" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit" class="button" title="Troubleshooting" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Aexport&amp;1283185492" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:export" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>
