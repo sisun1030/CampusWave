@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:scheduler_3.0    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+
+
+<h2><a name="migration_to_the_scheduler_3.0" id="migration_to_the_scheduler_3.0">Migration to the Scheduler 3.0</a></h2>
+<div class="level2">
+
+<p>
+
+<div class='dhx_note'><div class='dhx_note_img'>&nbsp;</div>
+  Scheduler 3.0 is not released yet
+</div>
+<div class='dhx_note'><div class='dhx_note_img'>&nbsp;</div>
+  You need not change anything to work with existing version of scheduler. All described below code is supported in scheduler 2.3 , but will be deprecated in scheduler 3.0
+</div>
+</p>
+
+<p>
+There are few inner methods which were exposed but will not be available in scheduler 3.0
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="98-473" /><input type="hidden" name="rev" value="1282656079" /><input type="hidden" name="id" value="dhtmlxscheduler:scheduler_3.0" /><input type="submit" value="Edit" class="button" title="Migration to the Scheduler 3.0" /></div></form></div>
+<h3><a name="resetting_lightbox" id="resetting_lightbox">resetting lightbox</a></h3>
+<div class="level3">
+<pre class="code javascript">    scheduler._lightbox <span class="sy0">=</span> <span class="kw2">null</span>;</pre>
+<p>
+
+→
+
+</p>
+<pre class="code javascript">    <span class="co1">//2.3+</span>
+    scheduler.<span class="me1">resetLightbox</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="474-636" /><input type="hidden" name="rev" value="1282656079" /><input type="hidden" name="id" value="dhtmlxscheduler:scheduler_3.0" /><input type="submit" value="Edit" class="button" title="resetting lightbox" /></div></form></div>
+<h3><a name="current_state" id="current_state">current state</a></h3>
+<div class="level3">
+<pre class="code javascript">    scheduler._date
+    scheduler._mode
+    scheduler._min_date
+    scheduler._max_date
+    scheduler._editor_id
+    scheduler._lightbox_id</pre>
+<p>
+
+→
+
+</p>
+<pre class="code javascript">    <span class="co1">//2.3+</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">date</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">mode</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">min_date</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">max_date</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">editor_id</span>
+    scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">lightbox_id</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="637-" /><input type="hidden" name="rev" value="1282656079" /><input type="hidden" name="id" value="dhtmlxscheduler:scheduler_3.0" /><input type="submit" value="Edit" class="button" title="current state" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Ascheduler_3.0&amp;1283185494" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:scheduler_3.0" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>

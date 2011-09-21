@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:timeline    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+<h1><a name="timeline_view" id="timeline_view">Timeline view</a></h1>
+<div class="level1">
+
+<p>
+
+In timeline view, vertical scale presents event holders, while vertical scale is a configurable time-scale.
+</p>
+
+<p>
+The view has 3 modes:
+</p>
+<ol>
+<li class="level1"><div class="li"> Bar mode</div>
+</li>
+<li class="level1"><div class="li"> Cell mode</div>
+</li>
+<li class="level1"><div class="li"> Tree mode</div>
+</li>
+</ol>
+
+<p>
+
+To init this view, regardless of mode type, you need to make the following steps firstly:<br/>
+
+</p>
+
+<p>
+<strong>1.</strong> Include extra files
+
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">'./codebase/ext/dhtmlxscheduler_timeline.js'</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;./codebase/ext/dhtmlxscheduler_ext.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">media</span><span class="sy0">=</span><span class="st0">&quot;screen&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;no title&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span></pre>
+<p>
+
+<strong>2.</strong> Add new tab to the html template
+
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;dhx_cal_tab&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;week_tab&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;right:140px;&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;dhx_cal_tab&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;timeline_tab&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;right:280px;&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;dhx_cal_tab&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;month_tab&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;right:76px;&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+<p>
+Then,define the desired mode.
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="58-944" /><input type="hidden" name="rev" value="1282147811" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit" class="button" title="Timeline view" /></div></form></div>
+<h2><a name="bar_mode" id="bar_mode">Bar mode</a></h2>
+<div class="level2">
+
+<p>
+In this mode, events look like lines.
+</p>
+
+<p>
+<img src="dhtmlxscheduler___timeline2.png"  class="media" alt="" />
+</p>
+
+<p>
+To init such mode you need to 
+
+</p>
+<ul>
+<li class="level1"><div class="li"> define parameters of timeline</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">createTimelineView</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+         <span class="kw3">name</span><span class="sy0">:</span>		<span class="st0">&quot;timeline&quot;</span><span class="sy0">,</span>
+         x_unit<span class="sy0">:</span>	<span class="st0">&quot;minute&quot;</span><span class="sy0">,</span>
+         x_date<span class="sy0">:</span>	<span class="st0">&quot;%H:%i&quot;</span><span class="sy0">,</span>
+         x_step<span class="sy0">:</span>	<span class="nu0">1</span><span class="sy0">,</span>
+         x_size<span class="sy0">:</span>	<span class="nu0">15</span><span class="sy0">,</span>
+         y_unit<span class="sy0">:</span><span class="br0">&#91;</span>	
+              <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">1</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;James Smith&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">2</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;John Williams&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">3</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;David Miller&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">4</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Linda Brown&quot;</span><span class="br0">&#125;</span>	
+         <span class="br0">&#93;</span><span class="sy0">,</span>
+         y_property<span class="sy0">:</span><span class="st0">&quot;section_id&quot;</span><span class="sy0">,</span>
+         render<span class="sy0">:</span>	<span class="st0">&quot;bar&quot;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>;</pre><ul>
+<li class="level1"><div class="li"> init scheduler</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">init</span><span class="br0">&#40;</span><span class="st0">'scheduler_here'</span><span class="sy0">,</span><span class="kw2">new</span> Date<span class="br0">&#40;</span><span class="nu0">2009</span><span class="sy0">,</span><span class="nu0">5</span><span class="sy0">,</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;timeline&quot;</span><span class="br0">&#41;</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="945-1647" /><input type="hidden" name="rev" value="1282147811" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit" class="button" title="Bar mode" /></div></form></div>
+<h2><a name="cell_mode" id="cell_mode">Cell mode</a></h2>
+<div class="level2">
+
+<p>
+In cell mode, events &#039;fill&#039; with colour full cells. 
+</p>
+
+<p>
+<img src="dhtmlxscheduler___cell-mode.png"  class="media" alt="" />
+</p>
+
+<p>
+To init such mode you need to 
+
+</p>
+<ul>
+<li class="level1"><div class="li"> define parameters of timeline</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">createTimelineView</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+         <span class="kw3">name</span><span class="sy0">:</span>	<span class="st0">&quot;matrix&quot;</span><span class="sy0">,</span>
+         x_unit<span class="sy0">:</span>	<span class="st0">&quot;day&quot;</span><span class="sy0">,</span>
+         x_date<span class="sy0">:</span>	<span class="st0">&quot;%d %M&quot;</span><span class="sy0">,</span>
+         x_step<span class="sy0">:</span>	<span class="nu0">1</span><span class="sy0">,</span>
+         x_size<span class="sy0">:</span>	<span class="nu0">15</span><span class="sy0">,</span>
+         y_unit<span class="sy0">:</span><span class="br0">&#91;</span>	
+              <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">1</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Elizabeth Taylor&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">2</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Linda Brown&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">3</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;George Lucas&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">4</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;John Williams&quot;</span><span class="br0">&#125;</span>	
+         <span class="br0">&#93;</span><span class="sy0">,</span>
+         y_property<span class="sy0">:</span><span class="st0">&quot;section_id&quot;</span><span class="sy0">,</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>;</pre><ul>
+<li class="level1"><div class="li"> init scheduler</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">init</span><span class="br0">&#40;</span><span class="st0">'scheduler_here'</span><span class="sy0">,</span><span class="kw2">new</span> Date<span class="br0">&#40;</span><span class="nu0">2009</span><span class="sy0">,</span><span class="nu0">5</span><span class="sy0">,</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;matrix&quot;</span><span class="br0">&#41;</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1648-2340" /><input type="hidden" name="rev" value="1282147811" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit" class="button" title="Cell mode" /></div></form></div>
+<h2><a name="hierarchical_data_structure_tree_mode" id="hierarchical_data_structure_tree_mode">Hierarchical Data Structure (tree mode)</a></h2>
+<div class="level2">
+
+<p>
+
+This is a novelty of 2.3 version. The feature makes possible to group names by creating multilevel folders. In addition to more convenient represantion, it allows you to specify an event not only for individual event holder but also for the whole folder (any level). 
+</p>
+
+<p>
+<img src="dhtmlxscheduler___tree-mode.png"  class="media" alt="" />
+</p>
+
+<p>
+
+To init such mode you need to 
+
+</p>
+<ul>
+<li class="level1"><div class="li"> include one more extra file</div>
+</li>
+</ul>
+<pre class="code javascript"><span class="sy0">&lt;</span>script src<span class="sy0">=</span><span class="st0">'../../codebase/ext/dhtmlxscheduler_treetimeline.js'</span> type<span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> charset<span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span><span class="sy0">&gt;&lt;/</span>script<span class="sy0">&gt;</span></pre><ul>
+<li class="level1"><div class="li"> define parameters of timeline</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">createTimelineView</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	 section_autoheight<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+	 <span class="kw3">name</span><span class="sy0">:</span>	<span class="st0">&quot;timeline&quot;</span><span class="sy0">,</span>
+	 x_unit<span class="sy0">:</span> <span class="st0">&quot;minute&quot;</span><span class="sy0">,</span>
+	 x_date<span class="sy0">:</span> <span class="st0">&quot;%H:%i&quot;</span><span class="sy0">,</span>
+	 x_step<span class="sy0">:</span> <span class="nu0">30</span><span class="sy0">,</span>
+	 x_size<span class="sy0">:</span> <span class="nu0">24</span><span class="sy0">,</span>
+	 x_start<span class="sy0">:</span> <span class="nu0">16</span><span class="sy0">,</span>
+	 x_length<span class="sy0">:</span> <span class="nu0">48</span><span class="sy0">,</span>
+	 y_unit<span class="sy0">:</span><span class="br0">&#91;</span>
+              <span class="br0">&#123;</span>label<span class="sy0">:</span><span class="st0">&quot;Web Testing Dep.&quot;</span><span class="sy0">,</span> <span class="kw3">open</span><span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span> children<span class="sy0">:</span> <span class="br0">&#91;</span>
+	          <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">2</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Elizabeth Taylor&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		  <span class="br0">&#123;</span>label<span class="sy0">:</span><span class="st0">&quot;Managers&quot;</span><span class="sy0">,</span> <span class="kw3">open</span><span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span> children<span class="sy0">:</span> <span class="br0">&#91;</span>
+		      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">4</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;John Williams&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		      <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">5</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;David Miller&quot;</span><span class="br0">&#125;</span>
+		   <span class="br0">&#93;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		  <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">6</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Linda Brown&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		  <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">7</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;George Lucas&quot;</span><span class="br0">&#125;</span>
+	       <span class="br0">&#93;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	       <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">8</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Kate Moss&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	       <span class="br0">&#123;</span>key<span class="sy0">:</span><span class="nu0">9</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Dian Fossey&quot;</span><span class="br0">&#125;</span> 
+         <span class="br0">&#93;</span><span class="sy0">,</span>
+	 y_property<span class="sy0">:</span> <span class="st0">&quot;section_id&quot;</span><span class="sy0">,</span>
+	 render<span class="sy0">:</span> <span class="st0">&quot;tree&quot;</span><span class="sy0">,</span>
+	 folder_events_available<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+	 dy<span class="sy0">:</span><span class="nu0">60</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>;</pre><ul>
+<li class="level1"><div class="li"> init scheduler</div>
+</li>
+</ul>
+<pre class="code javascript">scheduler.<span class="me1">init</span><span class="br0">&#40;</span><span class="st0">'scheduler_here'</span><span class="sy0">,</span><span class="kw2">new</span> Date<span class="br0">&#40;</span><span class="nu0">2009</span><span class="sy0">,</span><span class="nu0">5</span><span class="sy0">,</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="st0">&quot;timeline&quot;</span><span class="br0">&#41;</span>;</pre>
+<p>
+
+Except of monstrosity list of parameters, used in createTimelineView, it seems rather simple. 
+</p>
+
+</div>
+
+<h4><a name="parameters_of_createtimelineview" id="parameters_of_createtimelineview">Parameters of createTimelineView</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> name - the name of a view, the same as the name of the tab in html template ( you can have few different timeline, with different name , at the same time )</div>
+</li>
+<li class="level1"><div class="li"> render - the name of a mode (“bar”, “cell” or “tree”). This parameter is reserved for future updates</div>
+</li>
+<li class="level1"><div class="li"> section_autoheight - assigns automatic height adjustment of the cells </div>
+</li>
+<li class="level1"><div class="li"> dy - the minimal height of cells (if <em>section_autoheight</em> parameter has value &#039;false&#039;, the height of the cells will be equal to <em>dy</em>, otherwise the height of the cells will be increase to fill all free space). </div>
+</li>
+</ul>
+
+<p>
+<em>&#039;Tree mode&#039; personality:</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> folder_events_available - need to be set as “true”, if you want to have the possibility to specify an event not only for individual event holder but also for the whole folder (any level). </div>
+</li>
+<li class="level1"><div class="li"> folder_dy - the height of folders in pixels (nonapplicable for cells with folder names)</div>
+</li>
+</ul>
+
+<p>
+X scale
+</p>
+<ul>
+<li class="level1"><div class="li"> x_unit - size of units on X scale ( can be minute, hour, day, week, month, year )</div>
+</li>
+<li class="level1"><div class="li"> x_step - size of single scale step ( size defined in “x_unit”s)</div>
+</li>
+<li class="level1"><div class="li"> x_size - how must steps need to be shown </div>
+</li>
+<li class="level1"><div class="li"> x_start - value of minimal step</div>
+</li>
+<li class="level1"><div class="li"> x_length - how much x_step need to be used to fill the whole day ( it is necessary only if you are using minute or hour as x_unit )</div>
+</li>
+</ul>
+
+<p>
+  
+Time scale from 8AM to 8PM, with 30 minutes step
+
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+	x_unit<span class="sy0">:</span><span class="st0">&quot;minute&quot;</span><span class="sy0">,</span>
+	x_step<span class="sy0">:</span><span class="st0">&quot;30&quot;</span><span class="sy0">,</span>  
+	x_size<span class="sy0">:</span><span class="st0">&quot;24&quot;</span><span class="sy0">,</span>  <span class="co1">// (8PM - 8AM)/30min</span>
+	x_start<span class="sy0">:</span><span class="st0">&quot;16&quot;</span><span class="sy0">,</span> <span class="co1">// 8AM/30min</span>
+	x_length<span class="sy0">:</span><span class="st0">&quot;48&quot;</span> <span class="co1">// 24/30min</span>
+<span class="br0">&#125;</span></pre>
+<p>
+Time scale for two next days with 2hours step
+
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+	x_unit<span class="sy0">:</span><span class="st0">&quot;hour&quot;</span><span class="sy0">,</span>
+	x_step<span class="sy0">:</span><span class="nu0">2</span><span class="sy0">,</span>  
+	x_size<span class="sy0">:</span><span class="nu0">24</span>  <span class="co1">// 2days/2hours</span>
+<span class="br0">&#125;</span></pre>
+<p>
+Y scale
+</p>
+<ul>
+<li class="level1"><div class="li"> y_property - name of event&#039;s property</div>
+</li>
+<li class="level1"><div class="li"> y_unit - list of options for the property</div>
+</li>
+</ul>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="2341-5607" /><input type="hidden" name="rev" value="1282147811" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit" class="button" title="Hierarchical Data Structure (tree mode)" /></div></form></div>
+<h3><a name="templating" id="templating">Templating</a></h3>
+<div class="level3">
+
+<p>
+
+All templates need to be redefined after createTimelineView call
+</p>
+
+<p>
+In below snippets, you need to replace “timeline” with actual view name
+</p>
+
+<p>
+css class for x-scale header 
+
+</p>
+<pre class="code javascript">scheduler.<span class="me1">templates</span>.<span class="me1">timeline_scalex_class</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span>date<span class="br0">&#41;</span><span class="br0">&#123;</span>
+           <span class="kw1">if</span> <span class="br0">&#40;</span>date.<span class="me1">getDay</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">==</span>0 || date.<span class="me1">getDay</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">==</span><span class="nu0">6</span><span class="br0">&#41;</span>  <span class="kw1">return</span> <span class="st0">&quot;yellow_cell&quot;</span>;
+           <span class="kw1">return</span> <span class="st0">&quot;&quot;</span>;
+         <span class="br0">&#125;</span></pre>
+<p>
+format of date in the x-scale
+
+</p>
+<pre class="code javascript">scheduler.<span class="me1">templates</span>.<span class="me1">timeline_scale_date</span><span class="sy0">=</span><span class="kw2">function</span><span class="br0">&#40;</span>date<span class="br0">&#41;</span><span class="br0">&#123;</span>
+            <span class="kw2">var</span> format <span class="sy0">=</span> scheduler.<span class="me1">date</span>.<span class="me1">date_to_str</span><span class="br0">&#40;</span><span class="st0">&quot;%D, %d.%m.%Y&quot;</span><span class="br0">&#41;</span>;
+			<span class="kw1">return</span> format<span class="br0">&#40;</span>date<span class="br0">&#41;</span>;
+        <span class="br0">&#125;</span></pre>
+<p>
+<div class='dhx_note'><div class='dhx_note_img'>&nbsp;</div>
+Starting with version 2.3, you can create new events in timeline view by double click or drag-and-drop commands. Drag-and-drop command also allows to move existing events within calendar area. 
+</div>
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="5608-" /><input type="hidden" name="rev" value="1282147811" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit" class="button" title="Templating" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Atimeline&amp;1283185459" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:timeline" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>

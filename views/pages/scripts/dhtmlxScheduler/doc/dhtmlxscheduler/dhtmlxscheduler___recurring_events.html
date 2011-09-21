@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:recurring_events    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+<h2><a name="recurring_events" id="recurring_events">Recurring events</a></h2>
+<div class="level2">
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="58-87" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:recurring_events" /><input type="submit" value="Edit" class="button" title="Recurring events" /></div></form></div>
+<h3><a name="interface" id="interface">Interface</a></h3>
+<div class="level3">
+
+<p>
+Starting from version 2.0, scheduler supports recurring events. 
+To enable such functionality you need to include two additional files
+</p>
+<ul>
+<li class="level1"><div class="li"> dhtmlxscheduler_recurring.js </div>
+</li>
+<li class="level1"><div class="li"> dhtmlxscheduler_recurring.css</div>
+</li>
+</ul>
+<pre class="code html4strict">	<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;codebase/dhtmlxscheduler.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+	<span class="sc2">&lt;<a href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;codebase/dhtmlxscheduler.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+&nbsp;
+	<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;codebase/dhtmlxscheduler_recurring.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+	<span class="sc2">&lt;<a href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;codebase/dhtmlxscheduler_recurring.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span></pre>
+<p>
+All other initialization goes same as for normal scheduler. 
+</p>
+
+<p>
+As result you will have the “Details form” similar to next
+</p>
+
+<p>
+<img src="dhtmlxscheduler___details_recurring.png"  class="media" alt="" />
+</p>
+
+<p>
+“Enabled”|”Disabled” button at right corner of section allow enable|disable recurring for the event. 
+In-section editor allow to choose type of event repeating and date when repeating will end. 
+</p>
+
+<p>
+Format of date in “end by” field, can be controlled by 
+</p>
+<ul>
+<li class="level1"><div class="li"> scheduler.config.repeat_date (<a href="dhtmlxscheduler___settings_format.html" class="wikilink1" title="dhtmlxscheduler:settings_format">possible values</a>)</div>
+</li>
+</ul>
+
+<p>
+
+If you plan to add a custom fields to the details form , be sure to check <a href="dhtmlxscheduler___custom_details_form.html" class="wikilink1" title="dhtmlxscheduler:custom_details_form">specific of form customization when recurring events are used</a>
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="88-1408" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:recurring_events" /><input type="submit" value="Edit" class="button" title="Interface" /></div></form></div>
+<h3><a name="server_side_integration" id="server_side_integration">Server side integration</a></h3>
+<div class="level3">
+
+<p>
+
+DB need to have next additional fields 
+</p>
+<ol>
+<li class="level1"><div class="li"> rec_type - varchar[64]</div>
+</li>
+<li class="level1"><div class="li"> event_length - long int</div>
+</li>
+<li class="level1"><div class="li"> event_pid - int</div>
+</li>
+</ol>
+
+<p>
+
+So connector , will look similar to next
+
+</p>
+<pre class="code php">           <span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">render_table</span><span class="br0">&#40;</span><span class="st0">&quot;events_rec&quot;</span><span class="sy0">,</span><span class="st0">&quot;event_id&quot;</span><span class="sy0">,</span><span class="st0">&quot;start_date,end_date,text,rec_type,event_pid,event_length&quot;</span><span class="br0">&#41;</span>;</pre>
+<p>
+
+As in normal case, in addition to mandatory fields, any extra data can be extracted from DB.
+</p>
+
+</div>
+
+<h4><a name="rec_type" id="rec_type">rec_type</a></h4>
+<div class="level4">
+
+<p>
+This data will be set automatically through scheduler interface
+</p>
+
+<p>
+type of recurring encoded in string [type]_[count]_[count2]_[day]_[days]#[extra]
+
+</p>
+<ul>
+<li class="level1"><div class="li"> type - type of repeating “day”,”week”,”week”,”month”,”year”</div>
+</li>
+<li class="level1"><div class="li"> count - how much intervals of “type” come between events</div>
+</li>
+<li class="level1"><div class="li"> count2 and day - used to define day of month ( first Monday, third Friday, etc ) </div>
+</li>
+<li class="level1"><div class="li"> days - comma separated list of affected week days</div>
+</li>
+<li class="level1"><div class="li"> extra - this info is not necessary for calculation, but can be used to correct presentation of recurring details</div>
+</li>
+</ul>
+
+<p>
+
+For example:
+</p>
+<ul>
+<li class="level1"><div class="li"> day_3___ - each three days</div>
+</li>
+<li class="level1"><div class="li"> month _2___ - each two month</div>
+</li>
+<li class="level1"><div class="li"> month_1_1_2_ - second Monday of each month</div>
+</li>
+<li class="level1"><div class="li"> week_2___1,5 - Monday and Friday of each second week</div>
+</li>
+<li class="level1"><div class="li"> none - special type value, which is used by deleted events from the serie (it will not be rendered in grid , but block recurring of repeated event in defined time) </div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="event_length" id="event_length">event_length</a></h4>
+<div class="level4">
+
+<p>
+length of event in seconds ( in case of recurring event, end data shows the moment when recurring will be finished, so separate field is necessary to store actual length ) 
+</p>
+
+</div>
+
+<h4><a name="event_pid" id="event_pid">event_pid</a></h4>
+<div class="level4">
+
+<p>
+it possible to delete or change some events in serie - in such case, for each update, separate record created , which will point to master id , by using this field
+</p>
+
+<p>
+The xml for recurring event will look as
+</p>
+<pre class="code xml"><span class="sc3"><span class="re1">&lt;event</span> <span class="re0">id</span>=<span class="st0">&quot;some&quot;</span><span class="re2">&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;start_date<span class="re2">&gt;</span></span></span> start date of recurring period , start date of first event in the period as well <span class="sc3"><span class="re1">&lt;/start_date<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;end_date<span class="re2">&gt;</span></span></span> end date of recurring period <span class="sc3"><span class="re1">&lt;/start_date<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;text<span class="re2">&gt;</span></span></span> text of event <span class="sc3"><span class="re1">&lt;/text<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;rec_type<span class="re2">&gt;</span></span></span> recurring type <span class="sc3"><span class="re1">&lt;/rec_type<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;event_length<span class="re2">&gt;</span></span></span> length of event in seconds <span class="sc3"><span class="re1">&lt;/event_length<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;event_pid<span class="re2">&gt;</span></span></span>  0 for master events, or ID of master event for sub-events <span class="sc3"><span class="re1">&lt;/event_pid<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/event<span class="re2">&gt;</span></span></span></pre>
+<p>
+In addition to extra fields, some logic need to be added to server side controller. ( you can check samples/reccuring_events/events_rec.php for example ) 
+</p>
+<ol>
+<li class="level1"><div class="li"> if event with rec_type==none wad inserted - response must have “deleted” status</div>
+</li>
+<li class="level1"><div class="li"> if event with rec_type was updated or deleted - all records with event_pid equal to the master id must be deleted</div>
+</li>
+<li class="level1"><div class="li"> if event with event_pid value was deleted - it need to be updated with rec_type “none” instead of deleting.</div>
+</li>
+</ol>
+<pre class="code php">	<span class="kw2">function</span> delete_related<span class="br0">&#40;</span><span class="re0">$action</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<a href="http://www.php.net/global"><span class="kw3">global</span></a> <span class="re0">$scheduler</span>;
+&nbsp;
+		<span class="re0">$status</span> <span class="sy0">=</span> <span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_status</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="re0">$type</span> <span class="sy0">=</span><span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_value</span><span class="br0">&#40;</span><span class="st0">&quot;rec_type&quot;</span><span class="br0">&#41;</span>;
+		<span class="re0">$pid</span> <span class="sy0">=</span><span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_value</span><span class="br0">&#40;</span><span class="st0">&quot;event_pid&quot;</span><span class="br0">&#41;</span>;
+		<span class="co1">//when serie changed or deleted we need to remove all linked events</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="re0">$status</span> <span class="sy0">==</span> <span class="st0">&quot;deleted&quot;</span> || <span class="re0">$status</span> <span class="sy0">==</span> <span class="st0">&quot;updated&quot;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$type</span><span class="sy0">!=</span><span class="st0">&quot;&quot;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">sql</span><span class="sy0">-&gt;</span><span class="me1">query</span><span class="br0">&#40;</span><span class="st0">&quot;DELETE FROM events_rec WHERE event_pid='&quot;</span><span class="sy0">.</span><span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">sql</span><span class="sy0">-&gt;</span><span class="me1">escape</span><span class="br0">&#40;</span><span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_id</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;'&quot;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$status</span> <span class="sy0">==</span> <span class="st0">&quot;deleted&quot;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$pid</span> <span class="sy0">!=</span><span class="nu19">0</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">sql</span><span class="sy0">-&gt;</span><span class="me1">query</span><span class="br0">&#40;</span><span class="st0">&quot;UPDATE events_rec SET rec_type='none' WHERE event_id='&quot;</span><span class="sy0">.</span><span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">sql</span><span class="sy0">-&gt;</span><span class="me1">escape</span><span class="br0">&#40;</span><span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_id</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;'&quot;</span><span class="br0">&#41;</span>;
+			<span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">success</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+&nbsp;
+	<span class="br0">&#125;</span>
+	<span class="kw2">function</span> insert_related<span class="br0">&#40;</span><span class="re0">$action</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		<span class="re0">$status</span> <span class="sy0">=</span> <span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_status</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span class="re0">$type</span> <span class="sy0">=</span><span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">get_value</span><span class="br0">&#40;</span><span class="st0">&quot;rec_type&quot;</span><span class="br0">&#41;</span>;
+&nbsp;
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="re0">$status</span> <span class="sy0">==</span> <span class="st0">&quot;inserted&quot;</span> <span class="sy0">&amp;&amp;</span> <span class="re0">$type</span><span class="sy0">==</span><span class="st0">&quot;none&quot;</span><span class="br0">&#41;</span>
+			<span class="re0">$action</span><span class="sy0">-&gt;</span><span class="me1">set_status</span><span class="br0">&#40;</span><span class="st0">&quot;deleted&quot;</span><span class="br0">&#41;</span>;
+	<span class="br0">&#125;</span>
+&nbsp;
+	<span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">event</span><span class="sy0">-&gt;</span><span class="me1">attach</span><span class="br0">&#40;</span><span class="st0">&quot;beforeProcessing&quot;</span><span class="sy0">,</span><span class="st0">&quot;delete_related&quot;</span><span class="br0">&#41;</span>;
+	<span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">event</span><span class="sy0">-&gt;</span><span class="me1">attach</span><span class="br0">&#40;</span><span class="st0">&quot;afterProcessing&quot;</span><span class="sy0">,</span><span class="st0">&quot;insert_related&quot;</span><span class="br0">&#41;</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1409-" /><input type="hidden" name="rev" value="1280760438" /><input type="hidden" name="id" value="dhtmlxscheduler:recurring_events" /><input type="submit" value="Edit" class="button" title="Server side integration" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Arecurring_events&amp;1283185461" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:recurring_events" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>

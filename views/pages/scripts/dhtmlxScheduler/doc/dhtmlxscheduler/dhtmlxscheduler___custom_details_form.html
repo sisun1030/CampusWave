@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:custom_details_form    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+<h2><a name="custom_details_form" id="custom_details_form">Custom &quot;details&quot; form</a></h2>
+<div class="level2">
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="58-91" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Custom details form" /></div></form></div>
+<h3><a name="structure_of_details_form" id="structure_of_details_form">Structure of details form</a></h3>
+<div class="level3">
+
+<p>
+
+<img src="dhtmlxscheduler___details_form.png"  class="media" alt="" />
+</p>
+
+<p>
+Header of details form - text defined by next templates
+
+</p>
+<pre class="code javascript">    scheduler.<span class="me1">templates</span>.<span class="me1">event_header</span>
+    scheduler.<span class="me1">templates</span>.<span class="me1">event_bar_text</span></pre>
+<p>
+
+Sections below defined through scheduler.config.lightbox.sections, default configuration is the next
+
+</p>
+<pre class="code javascript">	lightbox<span class="sy0">:</span><span class="br0">&#123;</span>
+		sections<span class="sy0">:</span><span class="br0">&#91;</span>	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;description&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">200</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;text&quot;</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;textarea&quot;</span> <span class="sy0">,</span> <span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">true</span><span class="br0">&#125;</span><span class="sy0">,</span>
+				<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">72</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;auto&quot;</span><span class="br0">&#125;</span>	<span class="br0">&#93;</span>
+	<span class="br0">&#125;</span></pre>
+<p>
+Sections is an array, which represent the sections inside the form
+</p>
+<ul>
+<li class="level1"><div class="li"> name - name of the section , based on section name its label will be taken from <em>locale</em> collection. For example, for “time” section , label will be taken as scheduler.locale.section_time </div>
+</li>
+<li class="level1"><div class="li"> height - height of section </div>
+</li>
+<li class="level1"><div class="li"> map_to - property maped to the editor</div>
+</li>
+<li class="level1"><div class="li"> type - type of editor</div>
+</li>
+<li class="level1"><div class="li"> focus - if set to true, related field will receive focus on form showing</div>
+</li>
+</ul>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="92-1060" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Structure of details form" /></div></form></div>
+<h3><a name="types_of_editors" id="types_of_editors">Types of editors</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> textarea - represented by textarea</div>
+</li>
+<li class="level1"><div class="li"> time - start and end date selectors</div>
+</li>
+<li class="level1"><div class="li"> select - select checkboxes</div>
+</li>
+<li class="level1"><div class="li"> <a href="dhtmlxscheduler___multiselect.html" class="wikilink1" title="dhtmlxscheduler:multiselect">multiselect</a> - multiselect checkboxes </div>
+</li>
+<li class="level1"><div class="li"> <a href="dhtmlxscheduler___checkbox.html" class="wikilink1" title="dhtmlxscheduler:checkbox">checkbox</a> - single checkbox in the section header </div>
+</li>
+<li class="level1"><div class="li"> <a href="dhtmlxscheduler___radio.html" class="wikilink1" title="dhtmlxscheduler:radio">radio</a> - set of radiobuttons</div>
+</li>
+<li class="level1"><div class="li"> <a href="dhtmlxscheduler___combo.html" class="wikilink1" title="dhtmlxscheduler:combo">combo</a> - DHTMLX Combo component as select</div>
+</li>
+</ul>
+<pre class="code javascript"><span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;reccuring&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">21</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;select&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;rec_type&quot;</span><span class="sy0">,</span> options<span class="sy0">:</span><span class="br0">&#91;</span>
+		<span class="br0">&#123;</span>key<span class="sy0">:</span><span class="st0">&quot;&quot;</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Do not repeat&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>key<span class="sy0">:</span><span class="st0">&quot;day&quot;</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Each day&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>key<span class="sy0">:</span><span class="st0">&quot;week&quot;</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Each week&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span>key<span class="sy0">:</span><span class="st0">&quot;month&quot;</span><span class="sy0">,</span> label<span class="sy0">:</span><span class="st0">&quot;Each month&quot;</span><span class="br0">&#125;</span>
+<span class="br0">&#93;</span><span class="br0">&#125;</span><span class="sy0">,</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1061-1642" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Types of editors" /></div></form></div>
+<h3><a name="mapping_db_fields_to_the_form" id="mapping_db_fields_to_the_form">Mapping DB fields to the form</a></h3>
+<div class="level3">
+
+<p>
+
+On server side, just add some field to the list of data fields
+</p>
+<pre class="code php">   <span class="re0">$scheduler</span><span class="sy0">-&gt;</span><span class="me1">render_table</span><span class="br0">&#40;</span><span class="st0">&quot;events_rec&quot;</span><span class="sy0">,</span><span class="st0">&quot;event_id&quot;</span><span class="sy0">,</span><span class="st0">&quot;start_date,end_date,text,rec_type&quot;</span><span class="br0">&#41;</span>;</pre>
+<p>
+If you are generating xml by custom code, just add subtag to the event as
+
+</p>
+<pre class="code xml">   <span class="sc3"><span class="re1">&lt;event</span> <span class="re0">id</span>=<span class="st0">'50'</span> <span class="re2">&gt;</span></span>
+	<span class="sc3"><span class="re1">&lt;start_date<span class="re2">&gt;</span></span></span><span class="sc2">&lt;![CDATA[2009-06-10 00:00:00]]&gt;</span><span class="sc3"><span class="re1">&lt;/start_date<span class="re2">&gt;</span></span></span>
+	<span class="sc3"><span class="re1">&lt;end_date<span class="re2">&gt;</span></span></span><span class="sc2">&lt;![CDATA[2009-06-12  00:00:00]]&gt;</span><span class="sc3"><span class="re1">&lt;/end_date<span class="re2">&gt;</span></span></span>
+	<span class="sc3"><span class="re1">&lt;text<span class="re2">&gt;</span></span></span><span class="sc2">&lt;![CDATA[New event]]&gt;</span><span class="sc3"><span class="re1">&lt;/text<span class="re2">&gt;</span></span></span>
+	<span class="sc3"><span class="re1">&lt;rec_type<span class="re2">&gt;</span></span></span><span class="sc2">&lt;![CDATA[ some value ]]&gt;</span><span class="sc3"><span class="re1">&lt;/rec_type<span class="re2">&gt;</span></span></span>
+   <span class="sc3"><span class="re1">&lt;/event<span class="re2">&gt;</span></span></span></pre>
+<p>
+Now on client side, you can use the same name in the map_to attribute of event
+</p>
+<pre class="code javascript">	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;reccuring&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;rec_type&quot;</span> ...</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1643-2328" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Mapping DB fields to the form" /></div></form></div>
+<h3><a name="custom_editors" id="custom_editors">Custom editors</a></h3>
+<div class="level3">
+
+<p>
+Final code can be checked at samples/sample_custom_editor.html
+</p>
+
+<p>
+To create your own custom section, you need to define new object in the next way
+</p>
+<pre class="code javascript">	scheduler.<span class="me1">form_blocks</span><span class="br0">&#91;</span><span class="st0">&quot;my_editor&quot;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="br0">&#123;</span>
+		render<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>sns<span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co1">//sns - section configuration object</span>
+			<span class="kw1">return</span> <span class="st0">&quot;html code of editor here&quot;</span>;
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		set_value<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>value<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="co1">//node - html object related to html defined above</span>
+			<span class="co1">//value - value defined by map_to property</span>
+			<span class="co1">//ev - event object</span>
+			... <span class="me1">code</span> to set value to the element ...
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		get_value<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="co1">//node - html object related to html defined above</span>
+			<span class="co1">//event object</span>
+			<span class="kw1">return</span> <span class="st0">&quot;current value from editor&quot;</span>;
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="co1">//node - html object related to html defined above</span>
+			...<span class="me1">code</span> to set <span class="kw3">focus</span> to the element...
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span></pre>
+<p>
+
+Make sure that you <strong>don&#039;t</strong> use short closing syntax for tags inside the html code returned by the “render” function, since that might cause parsing problems in the browser:
+
+</p>
+<pre class="code javascript">     render<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+          <span class="kw1">return</span> <span class="st0">&quot;&lt;div id='box'/&gt;&quot;</span>;<span class="co1">// this is WRONG</span>
+     <span class="br0">&#125;</span></pre>
+<p>
+
+Instead use opening and closing tags syntax:
+
+</p>
+<pre class="code javascript">     render<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+          <span class="kw1">return</span> <span class="st0">&quot;&lt;div id='box'&gt;&lt;/div&gt;&quot;</span>;<span class="co1">// recommended</span>
+     <span class="br0">&#125;</span></pre>
+<p>
+In real life it may look as 
+</p>
+<pre class="code javascript">	scheduler.<span class="me1">form_blocks</span><span class="br0">&#91;</span><span class="st0">&quot;my_editor&quot;</span><span class="br0">&#93;</span><span class="sy0">=</span><span class="br0">&#123;</span>
+		render<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>sns<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="st0">&quot;&lt;div class='dhx_cal_ltext' style='height:60px;'&gt;Text&amp;nbsp;&lt;input type='text'&gt;&lt;br/&gt;Details&amp;nbsp;&lt;input type='text'&gt;&lt;/div&gt;&quot;</span>;
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		set_value<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>value<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			node.<span class="me1">childNodes</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>.<span class="me1">value</span><span class="sy0">=</span>value||<span class="st0">&quot;&quot;</span>;
+			node.<span class="me1">childNodes</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span>.<span class="me1">value</span><span class="sy0">=</span>ev.<span class="me1">details</span>||<span class="st0">&quot;&quot;</span>;
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		get_value<span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			ev.<span class="me1">location</span> <span class="sy0">=</span> node.<span class="me1">childNodes</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span>.<span class="me1">value</span>;
+			<span class="kw1">return</span> node.<span class="me1">childNodes</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>.<span class="me1">value</span>;
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw2">var</span> a<span class="sy0">=</span>node.<span class="me1">childNodes</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>; a.<span class="me1">select</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; a.<span class="kw3">focus</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; 
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+	scheduler.<span class="me1">config</span>.<span class="me1">lightbox</span>.<span class="me1">sections</span><span class="sy0">=</span><span class="br0">&#91;</span>	
+		<span class="br0">&#123;</span> <span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;description&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">200</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;text&quot;</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;my_editor&quot;</span> <span class="sy0">,</span> <span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">true</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="br0">&#123;</span> <span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">72</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;auto&quot;</span><span class="br0">&#125;</span>	
+	<span class="br0">&#93;</span></pre>
+<p>
+<img src="dhtmlxscheduler___details_form_custom.png"  class="media" alt="" />
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="2329-4411" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Custom editors" /></div></form></div>
+<h3><a name="making_section_readonly" id="making_section_readonly">Making section readonly</a></h3>
+<div class="level3">
+
+<p>
+Can be done by customizing set_value method of related section object
+</p>
+<pre class="code javascript">    scheduler.<span class="me1">form_blocks</span>.<span class="me1">textarea</span>.<span class="me1">set_value</span><span class="sy0">=</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>value<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+        node.<span class="me1">firstChild</span>.<span class="me1">value</span><span class="sy0">=</span>value||<span class="st0">&quot;&quot;</span>;
+        node.<span class="me1">firstChild</span>.<span class="me1">disabled</span> <span class="sy0">=</span> ev.<span class="me1">disabled</span>; <span class="co1">// or just = true; to disable for all events</span>
+    <span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="4412-4753" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Making section readonly" /></div></form></div>
+<h3><a name="making_section_hidden_for_some_events" id="making_section_hidden_for_some_events">Making section hidden for some events</a></h3>
+<div class="level3">
+
+<p>
+Can be done by customizing set_value method of related section object
+</p>
+<pre class="code javascript">    scheduler.<span class="me1">form_blocks</span>.<span class="me1">textarea</span>.<span class="me1">set_value</span><span class="sy0">=</span><span class="kw2">function</span><span class="br0">&#40;</span>node<span class="sy0">,</span>value<span class="sy0">,</span>ev<span class="br0">&#41;</span><span class="br0">&#123;</span>
+        node.<span class="me1">firstChild</span>.<span class="me1">value</span><span class="sy0">=</span>value||<span class="st0">&quot;&quot;</span>;
+        <span class="kw2">var</span> style <span class="sy0">=</span> ev.<span class="me1">some_property</span><span class="sy0">?</span><span class="st0">&quot;&quot;</span><span class="sy0">:</span><span class="st0">&quot;none&quot;</span>;
+        node.<span class="me1">style</span>.<span class="me1">display</span><span class="sy0">=</span>style; <span class="co1">// editor area</span>
+        node.<span class="me1">previousSibling</span>.<span class="me1">style</span>.<span class="me1">display</span><span class="sy0">=</span>style; <span class="co1">//section header</span>
+        scheduler.<span class="me1">setLightboxSize</span><span class="br0">&#40;</span><span class="br0">&#41;</span>; <span class="co1">//correct size of lightbox</span>
+&nbsp;
+    <span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="4754-5245" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Making section hidden for some events" /></div></form></div>
+<h3><a name="replacing_with_custom_form" id="replacing_with_custom_form">Replacing with custom form</a></h3>
+<div class="level3">
+
+<p>
+
+Just redefine showLightbox method with any custom one
+
+</p>
+<pre class="code javascript">    scheduler.<span class="me1">showLightbox</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span>id<span class="br0">&#41;</span><span class="br0">&#123;</span>
+         <span class="co1">// id - id of event</span>
+         ... <span class="me1">code</span> to show any custom form ...
+    <span class="br0">&#125;</span></pre>
+<p>
+There are two helper methods - startLightbox and endLightbox , which you can use to simplify custom form implementation.
+Assuming that you have #custom_form html container somewhere on the page, you can use 
+</p>
+<pre class="code javascript">                <span class="kw2">var</span> custom_form <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;custom_form&quot;</span><span class="br0">&#41;</span>;
+&nbsp;
+		scheduler.<span class="me1">showLightbox</span> <span class="sy0">=</span> <span class="kw2">function</span><span class="br0">&#40;</span>id<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			<span class="kw2">var</span> ev <span class="sy0">=</span> scheduler.<span class="me1">getEvent</span><span class="br0">&#40;</span>id<span class="br0">&#41;</span>;
+			scheduler.<span class="me1">startLightbox</span><span class="br0">&#40;</span>id<span class="sy0">,</span> custom_form <span class="br0">&#41;</span>;
+			...<span class="st0">'here you need to set values in the form'</span>...
+                        <span class="co1">//document.getElementById(&quot;some_input&quot;).value = ev.text;</span>
+		<span class="br0">&#125;</span>
+		<span class="co1">//need to be attached to the save button</span>
+		<span class="kw2">function</span> save_form<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw2">var</span> ev <span class="sy0">=</span> scheduler.<span class="me1">getEvent</span><span class="br0">&#40;</span>scheduler.<span class="me1">getState</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.<span class="me1">lightbox_id</span><span class="br0">&#41;</span>;
+&nbsp;
+			...<span class="st0">'here you need to retrieve values from the form'</span>...
+                        <span class="co1">//ev.text = document.getElementById(&quot;some_input&quot;).value;</span>
+&nbsp;
+			scheduler.<span class="me1">endLightbox</span><span class="br0">&#40;</span><span class="kw2">true</span><span class="sy0">,</span> custom_form<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span>
+		<span class="co1">//need to be attached to the cancel button</span>
+		<span class="kw2">function</span> close_form<span class="br0">&#40;</span>argument<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			scheduler.<span class="me1">endLightbox</span><span class="br0">&#40;</span><span class="kw2">false</span><span class="sy0">,</span> custom_form<span class="br0">&#41;</span>;
+		<span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="5246-6513" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Replacing with custom form" /></div></form></div>
+<h3><a name="button_in_section_header" id="button_in_section_header">Button in section header</a></h3>
+<div class="level3">
+
+<p>
+It possible to have a custom button in section header, to create it just add a button property to section object
+
+</p>
+<pre class="code javascript">	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;description&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">130</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;text&quot;</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;textarea&quot;</span> <span class="sy0">,</span> <span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">true</span><span class="sy0">,</span> button<span class="sy0">:</span><span class="st0">&quot;help&quot;</span><span class="br0">&#125;</span></pre><pre class="code javascript">    scheduler.<span class="me1">locale</span>.<span class="me1">labels</span>.<span class="me1">button_help</span><span class="sy0">=</span><span class="st0">&quot;Help label&quot;</span>;
+    scheduler.<span class="me1">form_blocks</span>.<span class="me1">textarea</span>.<span class="me1">button_click</span><span class="sy0">=</span><span class="kw2">function</span><span class="br0">&#40;</span>index<span class="sy0">,</span> src<span class="sy0">,</span> sec<span class="sy0">,</span> data<span class="br0">&#41;</span><span class="br0">&#123;</span>
+             <span class="co1">//called on button click</span>
+             <span class="co1">// index - index of section</span>
+             <span class="co1">// sec - html element of section header</span>
+             <span class="co1">// sec - html element of section editor</span>
+    <span class="br0">&#125;</span></pre>
+<p>
+You can define image used for the button through next css class
+
+</p>
+<pre class="code css">  .dhx_custom_button_help<span class="br0">&#123;</span>
+       <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">imgs/but_help.gif</span><span class="br0">&#41;</span>;
+  <span class="br0">&#125;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="6514-7297" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Button in section header" /></div></form></div>
+<h3><a name="setting_duration_for_events" id="setting_duration_for_events">Setting duration for events</a></h3>
+<div class="level3">
+
+<p>
+The initial duration can be activated by the single line:
+
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">event_duration</span> <span class="sy0">=</span> <span class="nu0">60</span>;</pre>
+<p>
+
+But if you want that after changing start event time or date, the end event time and date will  be changed automatically to make the event  duration value 60 minutes, you must add the following:
+
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">auto_end_date</span> <span class="sy0">=</span> <span class="kw2">true</span>;</pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="7298-7719" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Setting duration for events" /></div></form></div>
+<h3><a name="full_day_event" id="full_day_event">Full day event</a></h3>
+<div class="level3">
+
+<p>
+You can add the possibility of setting full day events in &#039;timeline&#039; view.
+For this you just need to add the next codeline:
+
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">full_day</span>  <span class="sy0">=</span> <span class="kw2">true</span>;</pre>
+<p>
+
+Now <strong>Full Day</strong> checkbox will be displayed in the right top of the <strong>Time period</strong> section. After selection, all entry fields of the section will be blocked, and the event duration will be set as a full day from <strong>0.00am</strong> the current cell data to <strong>0.00am</strong> next day.
+</p>
+
+<p>
+<img src="dhtmlxscheduler___timeline.png"  class="media" alt="" />
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="7720-8237" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Full day event" /></div></form></div>
+<h3><a name="recurring_events" id="recurring_events">Recurring events</a></h3>
+<div class="level3">
+
+<p>
+
+In case of recurring events, form configuration looks like 
+
+</p>
+<pre class="code javascript"><span class="br0">&#91;</span>	 
+	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;description&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">130</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;text&quot;</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;textarea&quot;</span> <span class="sy0">,</span> <span class="kw3">focus</span><span class="sy0">:</span><span class="kw2">true</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;recurring&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">115</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;recurring&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;rec_type&quot;</span><span class="sy0">,</span> button<span class="sy0">:</span><span class="st0">&quot;recurring&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="br0">&#123;</span><span class="kw3">name</span><span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> height<span class="sy0">:</span><span class="nu0">72</span><span class="sy0">,</span> type<span class="sy0">:</span><span class="st0">&quot;time&quot;</span><span class="sy0">,</span> map_to<span class="sy0">:</span><span class="st0">&quot;auto&quot;</span><span class="br0">&#125;</span>
+<span class="br0">&#93;</span></pre>
+<p>
+
+You may add any extra section, but need to preserve both recurring and time sections. It is important that time section is placed <strong>after</strong> recurring section. 
+ 
+
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="8238-" /><input type="hidden" name="rev" value="1282674038" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit" class="button" title="Recurring events" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Acustom_details_form&amp;1283185451" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:custom_details_form" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>

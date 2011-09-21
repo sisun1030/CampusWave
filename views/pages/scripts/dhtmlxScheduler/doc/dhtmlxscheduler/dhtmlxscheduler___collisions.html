@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:collisions    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+
+
+<h2><a name="preventing_events_collisions" id="preventing_events_collisions">Preventing events collisions</a></h2>
+<div class="level2">
+
+<p>
+
+In many use-cases you may need to limit count of events per time slot, for example - deny creation of the second event if one event has been already defined at that time. To automate such a task the “collision” extension can be used.
+</p>
+
+<p>
+To activate extension you need to include the related js file
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;codebase/ext/dhtmlxscheduler_collision.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+<p>
+Actually that is all. From that point scheduler won&#039;t allow to create a new event or move any existent event to the timezone which is occupied by another one. 
+</p>
+
+<p>
+If you need to have more than one event per a time slot, you can set the collision_limit property: 
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">collision_limit</span> <span class="sy0">=</span> <span class="nu0">2</span>; <span class="co1">//allows 2 events per a time slot</span></pre>
+<p>
+If attempt to create an event in the occupied time slot is detected, the scheduler will generate <a href="dhtmlxscheduler___event_oneventcollision.html" class="wikilink1" title="dhtmlxscheduler:event_oneventcollision">onEventCollision</a> event
+</p>
+
+<p>
+<strong> With recurring events, the extension works from version 2.3+.</strong>
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="59-1076" /><input type="hidden" name="rev" value="1281718181" /><input type="hidden" name="id" value="dhtmlxscheduler:collisions" /><input type="submit" value="Edit" class="button" title="Preventing events collisions" /></div></form></div>
+<h2><a name="limiting_date-scale" id="limiting_date-scale">Limiting date-scale</a></h2>
+<div class="level2">
+
+<p>
+
+This extension allows to limit active dates ( a user won&#039;t be able to see the dates outside defined date or to create events during not-active dates )
+</p>
+
+<p>
+
+To activate extension you need to include the dhtmlxscheduler_limit.js file
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;codebase/ext/dhtmlxscheduler_limit.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+<p>
+and define the range:
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">limit_start</span> <span class="sy0">=</span> <span class="kw2">new</span> Date<span class="br0">&#40;</span><span class="sy0">-</span><span class="nu0">3999</span><span class="sy0">,</span>0<span class="sy0">,</span>0<span class="br0">&#41;</span>;
+scheduler.<span class="me1">config</span>.<span class="me1">limit_end</span>   <span class="sy0">=</span> <span class="kw2">new</span> Date<span class="br0">&#40;</span> <span class="nu0">3999</span><span class="sy0">,</span>0<span class="sy0">,</span>0<span class="br0">&#41;</span>;</pre>
+<p>
+If the scheduler detects an attempt to create an event with non-allowed date, <a href="dhtmlxscheduler___event_onlimitviolation.html" class="wikilink1" title="dhtmlxscheduler:event_onlimitviolation">onLimitViolation</a> event will be generated.
+</p>
+
+<p>
+If you need to block not only event creation, but viewing as well , you can use
+</p>
+<pre class="code javascript">scheduler.<span class="me1">config</span>.<span class="me1">limit_view</span>  <span class="sy0">=</span> <span class="kw2">true</span>;</pre>
+<p>
+
+<strong> With recurring events, the extension works from version 2.3+.</strong>
+
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="1077-" /><input type="hidden" name="rev" value="1281718181" /><input type="hidden" name="id" value="dhtmlxscheduler:collisions" /><input type="submit" value="Edit" class="button" title="Limiting date-scale" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Acollisions&amp;1283185455" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:collisions" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>

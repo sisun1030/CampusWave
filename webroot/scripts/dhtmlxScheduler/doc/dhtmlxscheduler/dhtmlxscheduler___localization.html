@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxscheduler:localization    [DHX documentation]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="page">
+
+<h2><a name="localization" id="localization">Localization</a></h2>
+<div class="level2">
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="58-83" /><input type="hidden" name="rev" value="1282590319" /><input type="hidden" name="id" value="dhtmlxscheduler:localization" /><input type="submit" value="Edit" class="button" title="Localization" /></div></form></div>
+<h3><a name="included_locales" id="included_locales">Included locales</a></h3>
+<div class="level3">
+
+<p>
+
+scheduler include localization for next languages
+
+</p>
+<table class="inline">
+	<tr class="row0">
+		<th class="col0 leftalign"> Language      </th><th class="col1 leftalign"> Common locale       </th><th class="col2"> Recurring events form </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Arabic </td><td class="col1"> sources/locale_ar.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> English </td><td class="col1"> default </td><td class="col2"> default </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Catalan </td><td class="col1"> sources/locale_cn.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0"> Chinese </td><td class="col1"> sources/locale_cn.js </td><td class="col2"> sources/locale_recurring_cn.js </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> Czech </td><td class="col1"> sources/locale_cs.js </td><td class="col2"> sources/locale_recurring_cs.js </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0"> Dutch </td><td class="col1"> sources/locale_nl.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> Finnish </td><td class="col1"> sources/locale_fi.js </td><td class="col2"> sources/locale_recurring_fi.js </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0"> French </td><td class="col1"> sources/locale_fr.js </td><td class="col2"> sources/locale_recurring_fr.js </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> German </td><td class="col1"> sources/locale_de.js </td><td class="col2"> sources/locale_recurring_de.js </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0"> Hebrew </td><td class="col1"> sources/locale_he.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> Hungarian </td><td class="col1"> sources/locale_hu.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0"> Indonesia </td><td class="col1"> sources/locale_id.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> Italian </td><td class="col1"> sources/locale_it.js </td><td class="col2"> sources/locale_recurring_it.js </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0"> Japanese </td><td class="col1"> sources/locale_jp.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> Norwegian </td><td class="col1"> sources/locale_no.js </td><td class="col2"> sources/locale_recurring_nl.js </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0"> Polish </td><td class="col1"> sources/locale_pl.js </td><td class="col2"> sources/locale_recurring_pl.js </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0"> Portuguese </td><td class="col1"> sources/locale_pt.js </td><td class="col2"> sources/locale_recurring_pt.js </td>
+	</tr>
+	<tr class="row18">
+		<td class="col0"> Russian </td><td class="col1"> sources/locale_ru.js </td><td class="col2"> sources/locale_recurring_ru.js </td>
+	</tr>
+	<tr class="row19">
+		<td class="col0"> Slovenian </td><td class="col1"> sources/locale_si.js </td><td class="col2"> not translated </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> Spanish </td><td class="col1"> sources/locale_es.js </td><td class="col2"> sources/locale_recurring_es.js </td>
+	</tr>
+	<tr class="row21">
+		<td class="col0"> Swedish </td><td class="col1"> sources/locale_sv.js </td><td class="col2"> sources/locale_recurring_sv.js </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> Ukrainian </td><td class="col1"> sources/locale_ua.js </td><td class="col2"> sources/locale_recurring_ua.js </td>
+	</tr>
+</table>
+
+<p>
+
+To activate necessary locale - you need to load related js file in additional to existing ones, for example the includes for scheduler with Spanish locale will look as
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../codebase/dhtmlxscheduler.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;../codebase/dhtmlxscheduler.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;no title&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../sources/locale_es.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+<p>
+Be sure to use <strong>charset=“utf-8”</strong>, because all locales are stored as UTF-8 text.
+</p>
+
+<p>
+<img src="dhtmlxscheduler___spain.png"  class="media" alt="" />
+</p>
+
+<p>
+If you are using recurring events, one more file need to be included - localized form for recurring events
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../codebase/dhtmlxscheduler.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;../codebase/dhtmlxscheduler.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;no title&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../sources/locale_es.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../sources/locale_recurring_es.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="84-2684" /><input type="hidden" name="rev" value="1282590319" /><input type="hidden" name="id" value="dhtmlxscheduler:localization" /><input type="submit" value="Edit" class="button" title="Included locales" /></div></form></div>
+<h3><a name="creating_custom_locale" id="creating_custom_locale">Creating custom locale</a></h3>
+<div class="level3">
+
+<p>
+
+You can made a copy of sources/locale.js, which is an english version of locale, and translate all strings in it to different language - including such translated js file will change interface of app in necessary way. ( You can send such file to support@dhtmlx.com - so we will include it in next release ) 
+</p>
+<pre class="code javascript">scheduler.<span class="me1">locale</span><span class="sy0">=</span><span class="br0">&#123;</span>
+	date<span class="sy0">:</span><span class="br0">&#123;</span>
+		month_full<span class="sy0">:</span><span class="br0">&#91;</span><span class="st0">&quot;January&quot;</span><span class="sy0">,</span> <span class="st0">&quot;February&quot;</span><span class="sy0">,</span> <span class="st0">&quot;March&quot;</span><span class="sy0">,</span> <span class="st0">&quot;April&quot;</span><span class="sy0">,</span> <span class="st0">&quot;May&quot;</span><span class="sy0">,</span> <span class="st0">&quot;June&quot;</span><span class="sy0">,</span> <span class="st0">&quot;July&quot;</span><span class="sy0">,</span> <span class="st0">&quot;August&quot;</span><span class="sy0">,</span> <span class="st0">&quot;September&quot;</span><span class="sy0">,</span> <span class="st0">&quot;October&quot;</span><span class="sy0">,</span> <span class="st0">&quot;November&quot;</span><span class="sy0">,</span> <span class="st0">&quot;December&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		month_short<span class="sy0">:</span><span class="br0">&#91;</span><span class="st0">&quot;Jan&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Feb&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Mar&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Apr&quot;</span><span class="sy0">,</span> <span class="st0">&quot;May&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Jun&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Jul&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Aug&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Sep&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Oct&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Nov&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Dec&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		day_full<span class="sy0">:</span><span class="br0">&#91;</span><span class="st0">&quot;Sunday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Monday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Tuesday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Wednesday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Thursday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Friday&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Saturday&quot;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+    	day_short<span class="sy0">:</span><span class="br0">&#91;</span><span class="st0">&quot;Sun&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Mon&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Tue&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Wed&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Thu&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Fri&quot;</span><span class="sy0">,</span> <span class="st0">&quot;Sat&quot;</span><span class="br0">&#93;</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    labels<span class="sy0">:</span><span class="br0">&#123;</span>
+    	dhx_cal_today_button<span class="sy0">:</span><span class="st0">&quot;Today&quot;</span><span class="sy0">,</span>
+    	day_tab<span class="sy0">:</span><span class="st0">&quot;Day&quot;</span><span class="sy0">,</span>
+    	week_tab<span class="sy0">:</span><span class="st0">&quot;Week&quot;</span><span class="sy0">,</span>
+    	month_tab<span class="sy0">:</span><span class="st0">&quot;Month&quot;</span><span class="sy0">,</span>
+    	new_event<span class="sy0">:</span><span class="st0">&quot;New event&quot;</span><span class="sy0">,</span>
+	icon_save<span class="sy0">:</span><span class="st0">&quot;Save&quot;</span><span class="sy0">,</span>
+	icon_cancel<span class="sy0">:</span><span class="st0">&quot;Cancel&quot;</span><span class="sy0">,</span>
+	icon_details<span class="sy0">:</span><span class="st0">&quot;Details&quot;</span><span class="sy0">,</span>
+	icon_edit<span class="sy0">:</span><span class="st0">&quot;Edit&quot;</span><span class="sy0">,</span>
+	icon_delete<span class="sy0">:</span><span class="st0">&quot;Delete&quot;</span><span class="sy0">,</span>
+	confirm_closing<span class="sy0">:</span><span class="st0">&quot;&quot;</span><span class="sy0">,</span> <span class="co1">//Your changes will be lost, are your sure?</span>
+	confirm_deleting<span class="sy0">:</span><span class="st0">&quot;Event will be deleted permanently, are you sure?&quot;</span><span class="sy0">,</span>
+	section_location<span class="sy0">:</span><span class="st0">&quot;Location&quot;</span><span class="sy0">,</span>
+	section_eventtype<span class="sy0">:</span><span class="st0">&quot;Event Type&quot;</span><span class="sy0">,</span>
+	section_organizer<span class="sy0">:</span><span class="st0">&quot;Organizer&quot;</span><span class="sy0">,</span>
+	section_description<span class="sy0">:</span><span class="st0">&quot;Description&quot;</span><span class="sy0">,</span>
+	section_time<span class="sy0">:</span><span class="st0">&quot;Time period&quot;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+<p>
+In case of reccuring events, it require a bit more complex operation. In addition to above step, you will need to made copy of sources/repeat_template.html and translate all text messages in it to target language. After that , translated html file need to be converted in sinlge line js string
+</p>
+<pre class="code php">		<span class="re0">$source</span> <span class="sy0">=</span> <span class="st0">&quot;repeat_template_&quot;</span><span class="sy0">.</span><span class="re0">$lang</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">.</span><span class="st0">&quot;.html&quot;</span>;
+		<span class="re0">$target</span> <span class="sy0">=</span> <span class="st0">&quot;locale_recurring_&quot;</span><span class="sy0">.</span><span class="re0">$lang</span><span class="br0">&#91;</span><span class="re0">$i</span><span class="br0">&#93;</span><span class="sy0">.</span><span class="st0">&quot;.js&quot;</span>;
+&nbsp;
+		<span class="re0">$data</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>;
+		<span class="re0">$data</span><span class="sy0">.=</span><span class="st0">&quot;scheduler.__recurring_template='&quot;</span><span class="sy0">.</span><a href="http://www.php.net/preg_replace"><span class="kw3">preg_replace</span></a><span class="br0">&#40;</span><span class="st0">&quot;|[<span class="es0">\t</span> ]+|&quot;</span><span class="sy0">,</span><span class="st0">&quot; &quot;</span><span class="sy0">,</span><a href="http://www.php.net/preg_replace"><span class="kw3">preg_replace</span></a><span class="br0">&#40;</span><span class="st0">&quot;|[<span class="es0">\r</span><span class="es0">\n</span>]+|&quot;</span><span class="sy0">,</span><span class="st0">&quot;&quot;</span><span class="sy0">,</span><a href="http://www.php.net/file_get_contents"><span class="kw3">file_get_contents</span></a><span class="br0">&#40;</span><span class="re0">$source</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;';<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;
+		file_put_contents<span class="br0">&#40;</span>target<span class="sy0">,</span><span class="re0">$data</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st0">&quot;<span class="es0">\n</span><span class="es0">\n</span>&quot;</span>;</pre>
+<p>
+To made things simpler, if you have translated html form - you can just send it to support@dhtmlx.com - we will reply with converted js file ( and will include translation in next release ) 
+</p>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="2685-4742" /><input type="hidden" name="rev" value="1282590319" /><input type="hidden" name="id" value="dhtmlxscheduler:localization" /><input type="submit" value="Edit" class="button" title="Creating custom locale" /></div></form></div>
+<h3><a name="additional_notes" id="additional_notes">Additional notes</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> If confirm_closing or confirm_deleting is not defined - related confirm dialog will not be shown at all (auto-confirm); </div>
+</li>
+<li class="level1"><div class="li"> section_{name} refers to the section inside details form, with name:{name};</div>
+</li>
+<li class="level1"><div class="li"> new_event - default text of new event.</div>
+</li>
+</ul>
+
+</div>
+<div class="secedit"><form class="button btn_secedit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="lines" value="4743-" /><input type="hidden" name="rev" value="1282590319" /><input type="hidden" name="id" value="dhtmlxscheduler:localization" /><input type="submit" value="Edit" class="button" title="Additional notes" /></div></form></div>
+    
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     
+
+   
+    
+      
+        
+        
+      
+      
+        
+        
+        
+        
+        
+        
+        
+      
+      
+    
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/docs/lib/exe/indexer.php?id=dhtmlxscheduler%3Alocalization&amp;1283185449" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <img class="footer-logo" src="codebase/tpl/dhtmlx/images/footer-logo.gif" />
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+        <form class="button btn_edit" method="post" action="/dhtmlx/docs/doku.php"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="dhtmlxscheduler:localization" /><input type="submit" value="Edit this page" class="button" accesskey="e" title="Edit this page [E]" /></div></form>    	    </div>
+</body>
+</html>
