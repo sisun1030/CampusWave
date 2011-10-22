@@ -6,7 +6,23 @@
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
+	echo $this->Html->css('main');
 	?>
+
+<div id="fb-root"></div>
+
+   <script src="http://connect.facebook.net/en_US/all.js"></script>
+
+   <script>
+
+      FB.init({ 
+
+         appId:'141843382572716', cookie:true, 
+
+         status:true, xfbml:true 
+
+      });
+      </script>
 
 	<script type="text/javascript" charset="utf-8">
 
@@ -153,10 +169,28 @@
 </script>
 	
 <body onload='init()'>
+<div class='header'><div class='banner'></div><div class='headerright'></div></div>
+
+<a class='log' href="/index.php/users/logout">Logout <b>></b></a>
+
+<div class='bar'><div class='barleft'></div>
+	<ul>
+		<li><a href='/index.php' id='home'>Home</a></li>
+		<li><a href=''>How It Works</a></li>
+		<li><a href=''>What's Hot</a></li>
+		<li><a href=''>Event Listings</a></li>
+		<li><a href=''>Groups</a></li>
+		
+		
+	</ul>
+	<div class='barright'></div>
+</div>
 
 
-<a href="/index.php/users/logout">Logout</a>
-   <div id="scheduler_here" class="dhx_cal_container" style='width:900px; height:425px; position:absolute; top:175px; left:50px;padding-bottom:30px;'>
+<div class='box'>
+   What's going on this month?
+   <hr style='width:700px;position:absolute;left:20px;top:32px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
+   <div id="scheduler_here" class="dhx_cal_container" style='width:700px; height:400px; position:absolute; top:50px; left:20px;padding-bottom:30px;text-transform:none'>
 
       <div class="dhx_cal_navline">
 
@@ -183,10 +217,55 @@
       </div>
 
       <div class="dhx_cal_data">
-
+      
       </div>
 
    </div>
+   
+ <div class="box_right">
+	Sort Events By
+	<hr style='width:550px;position:absolute;top:12px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
+</div>
+   
+<div class='box_bot'>
+	<form method="">
+		Search this month's events
+		<input type='text' style='height:26px;margin-right:0'><input type='submit' class='search_submit' value=''>
+		or
+		<button class="quick_start_event"><span>Quick Start Event</span></button>
+	</form>
+</div>
+
+</div>
+   <div class="bot">
+	<ul id="botlist">
+		Campuswave
+		<li>Sign Up</li>
+		<li>Login</li>
+		<li>About Us</li>
+		<li>Contact Us</li>
+		<li>Blog</li>
+		<li>Terms of Service</li>
+		<li>Privacy Policy</li>
+	</ul>
+	<hr style='width:420px; position:absolute; left:40px;top:28px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
+
+	<ul id="botlist" style="position:absolute; left:300px; top:0px;">
+		Events
+		<li>Start Event</li>
+		<li>Follow Event</li>
+		<li>What's Hot</li>
+		<li>Featured</li>
+		<li>Search Event</li>
+	</ul>
+	
+        <fb:like-box style="position:absolute; top:10px; left:600px; background-color:white;" data-href="http://www.facebook.com/pages/CampusWave/211446602221731" data-width="300" data-height="255" data-show-faces="true" data-stream="false" data-header="false" data-colorscheme='light'></fb:like-box>
+   </div>
+			
+<div class="footer">
+	Copyright (C) Campus Wave 2011, All right reserved.
+</div>
+
 
 
 </body>
