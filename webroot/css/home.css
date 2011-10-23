@@ -1,0 +1,178 @@
+
+html
+   {
+		margin:0px;
+		padding:0px;
+		height:100%;
+		background-image: url("/app/webroot/img/campus/cp_background.jpg");
+		background-width:100%;
+		background-height:1800px;
+		background-repeat: no-repeat;
+		 
+	}
+	
+body
+   {
+		margin:0px;
+		padding:0px;
+		height:100%;
+		padding-bottom:30px;overflow-y: scroll;	
+   }   
+   
+botBox
+	{
+		height:202px;
+		width:80%;
+		background-image: url("/app/webroot/img/bot_gradient.png");
+		font-size:12px;
+		color:#95a7b3;
+	}
+	
+botBox h
+	{
+		font-size:14px;
+		color:#fee564;
+	}
+		
+
+.Header
+	{
+		background-repeat:repeat-x;
+		visibility : visible;
+		margin-top:-8;margin-left:-8; margin-right:-7;
+		height:110px;
+		width:810px;
+	}
+footer
+	{
+		height:100px;
+	}
+a:link
+{
+		color:#F9D500;
+}
+ #backgroundPopup{  
+		display:none;  
+		position:fixed;  
+		_position:absolute; /* hack for internet explorer 6*/  
+		height:100%;  
+		width:100%;  
+		top:0;  
+		left:0;  
+		background:#ffffff;  
+		border:4px solid #cecece;  
+		z-index:3;  
+ }  
+ 
+#popupContact{   
+		position:fixed;  
+		_position:absolute; /* hack for internet explorer 6*/  
+		height:387px;  
+		width:575px;  
+		background-image:url('/app/webroot/img/campus/popup.png');
+		z-index:4;  
+		padding:12px;  
+		font-size:13px;  
+}  
+#popupContactClose{  
+		font-size:14px;  
+		line-height:14px;  
+		right:6px;  
+		top:4px;  
+		position:absolute;  
+		color:#6fa5fd;  
+		font-weight:700;  
+		display:block;  
+}  
+
+#tabMenu {
+		margin:0;
+		padding:0;
+		list-style:none;
+}
+#tabMenu li {
+		padding:0 5px 0 0;
+		text-align:center;
+		float:left;
+		height:28px;
+		width:102px;
+		cursor:pointer;
+		cursor:hand;
+}
+
+.box li{
+		background:url(/app/webroot/img/campus/tab.png) no-repeat 0 -28px;
+		color:#3d5169;
+		font-weight:bold;
+		line-height:28px;
+		vertical-align:middle;
+		
+}
+
+
+.box li.mouseover {
+		background-position:0 0;
+		color:white;
+}
+.box li.mouseout {
+		background-position:0 -28px;
+		color:#3d5169;
+}
+.box li.selected {
+		background-position:0 0;
+		color:white;
+}
+
+.box {
+		width:300px;
+		position:relative;
+		top:50px;
+		left:20px;
+		z-index:5;
+}
+
+.boxBody {
+		background-image: -webkit-gradient(linear,left bottom,left top,
+			color-stop(0.11, rgb(51,54,71)),
+			color-stop(1, rgb(70,99,131)));
+		background-image: -moz-linear-gradient(center bottom,
+			rgb(51,54,71) 11%,
+			rgb(70,99,131) 100%);
+		fontsize:'12px';
+		color:white;
+		height: 155px;
+}
+.boxBottom {
+		background:url(/app/webroot/img/campus/boxBottom.gif) no-repeat;height:11px;
+}
+
+.boxBody div {
+		display:none;
+}
+.boxBody div.show {
+		display:block;
+}
+.boxBody #category a {
+		display:block;
+}
+
+.boxTop {
+		clear:both
+}
+
+.boxBody a{
+		color:#a6cdca;
+}
+
+.boxBody a:hover, .boxBody a:active{
+		color:#84aba8;
+}
+
+.boxBody table{
+		padding-left:20px;
+}
+.boxBody td{
+		padding-top:5px;
+		text-align:right;
+
+} 

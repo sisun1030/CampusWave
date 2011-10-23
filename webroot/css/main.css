@@ -1,0 +1,251 @@
+
+html
+   {
+		margin:0px;
+		padding:0px;
+		height:100%;
+		background-image: url("/app/webroot/img/campus/cp_background.jpg");
+		background-width:100%;
+		background-height:100%;
+
+		 
+	}
+	
+body
+   	{
+		font-size:14px;
+		margin:0px;
+		padding:0px;
+		height:100%;
+		padding-bottom:30px;overflow-y: scroll;	
+		font-family: Verdana, Arial, sans-serif;
+		text-transform:uppercase;
+   	}   
+   
+.banner
+	{
+		background-image: url("/app/webroot/img/campus/CW.jpg");
+		width:564px;
+		height:97px;
+	}
+
+.header 
+	{
+		position:absolute;
+		left:50px;
+		width:1400px;
+		background-image: url("/app/webroot/img/campus/header.jpg");
+		height:97px;
+		background-repeat: repeat-x;
+	}
+.headerright
+	{
+		background-image: url("/app/webroot/img/campus/headerright.jpg");
+		position:absolute;
+		right:0px;
+		top:0px;
+		height:97px;
+		width:2px;
+	}
+
+.log 	
+	{
+		position:absolute;
+		top:60px;
+		left:1360px;
+		color:#fce753;
+		font-size:12px;
+		text-decoration:none;
+		text-transform:none
+	}
+	
+.bar
+	{
+		z-index:1;
+		position:absolute;
+		left:50px;
+		width:1400px;
+		top:97px;
+		background-image: url("/app/webroot/img/campus/bar.jpg");
+		height:40px;
+		background-repeat: repeat-x;
+		-webkit-box-shadow: 0 0 10px #444; /* Safari */
+		box-shadow: 0 0 10px #444;  
+	}
+
+.barleft
+	{
+		float:left;
+		background-image: url("/app/webroot/img/campus/barleft.jpg");
+		width:6px;
+		height:40px;
+		clear:none;
+	}
+.barright
+	{
+		float:right;
+		position:relative;	
+		top:-39px;
+		background-image: url("/app/webroot/img/campus/barright.jpg");
+		width:5px;
+		height:40px;
+		clear:none;
+	}
+.bar ul	
+	{
+		list-style:none;
+		padding:0;
+		margin:0;
+		height:39px;
+		width:50%;
+		clear:none;
+		text-transform:uppercase;
+
+	}	
+.bar li
+	{
+		padding: 0 10px;
+		float:left;
+		line-height:39px;
+		text-align:center;
+
+
+	}
+.bar a
+	{
+		display:block;
+		height:39px;
+		text-decoration:none;
+	}
+.bar a:link,.bar a:visited
+	{
+		color:white;
+	}
+.bar a:hover,.bar a:active	
+	{
+		color:#edd052;
+	}
+
+#home	
+	{
+		color:#1f69a3;
+		background-image: url("/app/webroot/img/campus/home.jpg");	
+		width:75px;
+	}
+#home:hover, #home:active
+	{
+		color:#e8c20f;
+	}
+
+footer
+	{
+		height:100px;
+	}
+a:link
+	{ 
+		color:#F9D500;
+	}
+
+.box	{
+		position:absolute;
+		top:137px;
+		left:50px;
+		width:1360px;
+		height:560px;
+		padding:20px;
+		background-color:white;
+		-webkit-box-shadow: 0 0 10px #000; /* Safari */
+		box-shadow: 0 0 10px #444;  
+	}
+
+.box_right
+	{
+		position:absolute;
+		top:20px;
+		left:800px;
+		
+	}
+
+.box_bot
+	{
+		position:absolute; 
+		top:530px
+	}
+
+.bot
+	{	position:absolute;
+		top:750px;
+		left:50px;
+		width:1400px;
+		background-image: url("/app/webroot/img/campus/bot.jpg");
+		height:272px;
+		background-repeat: repeat-x;
+		margin: 10px 0;
+		-webkit-box-shadow: 0 0 10px #444; /* Safari */
+		box-shadow: 0 0 10px #444;  
+		
+  	}
+
+#botlist
+	{	
+		list-style:none;
+		color:#fbe654;
+		font-size:16px;
+	}
+
+#botlist li
+	{	
+		color:#9dadba;
+		font-size:14px;
+		padding: 10px 0 0 0;
+	}
+
+.quick_start_event
+	{
+		position:relative;
+		top:14px;
+		background-image:  url("/app/webroot/img/campus/quick_start.jpg");
+		color:white;
+		font-size:12px;
+		height:36px;
+		width:160px;
+		line-height:36px;
+		border:0;
+		margin-left: 20px;
+		padding-right: 2px;
+	}
+.quick_start_event:hover
+	{
+		color:#fce753;
+	}
+.quick_start_event span
+	{
+		float:right;
+	}
+
+.search_submit
+	{
+		position:relative;
+		background-image:  url("/app/webroot/img/campus/search_submit.jpg");
+		height:28px;
+		width:87px;
+		border:0;
+		margin-right: 20px;
+		margin-left:0;
+	}
+	
+.footer
+	{
+		position:absolute;
+		top:1050px;
+		left:50px;
+		background-image:  url("/app/webroot/img/campus/footer.jpg");
+		height: 42px;
+		line-height: 42px;
+		width:1360px;
+		background-repeat: repeat-x;
+		padding-left:40px;
+		-webkit-box-shadow: 0 0 10px #444; /* Safari */
+		box-shadow: 0 0 10px #444; 
+	}
+
