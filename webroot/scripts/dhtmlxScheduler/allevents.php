@@ -1,6 +1,6 @@
 <?php
-	include ('/codebase/connector/scheduler_connector.php');
-	include ('/common/config.php');
+	include ('codebase/connector/scheduler_connector.php');
+	include ('common/config.php');
 
 	$res=mysql_connect($server, $user, $pass);
 	mysql_select_db($db_name);

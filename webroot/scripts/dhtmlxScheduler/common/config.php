@@ -1,6 +1,6 @@
 <?php
 	$server = "localhost";
-	$user	= "root";
-	$pass	= "";
+	$user	= "campuswa_freddy";
+	$pass	= "T7Z4WeFHttl8";
 	$db_name= "campuswa_inilaunch";
 ?>
