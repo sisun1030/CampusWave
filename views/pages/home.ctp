@@ -3,6 +3,7 @@
 	
 	echo $this->Html->script('jquery');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler');
+	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler_tooltip.js');
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
@@ -28,7 +29,7 @@
 
  function init() {
 
- 
+ /*
 
   scheduler.form_blocks["campus_editor"]={
 
@@ -64,7 +65,7 @@
 
   
 
-  /*scheduler.form_blocks["campus_event_title"]={
+  scheduler.form_blocks["campus_event_title"]={
 
    render:function(sns){   
 
@@ -80,7 +81,7 @@
 
    }
 
-  }*/
+  }
 
   
 
@@ -102,40 +103,43 @@
 
   }
 
-  
+  */
 
   scheduler.config.lightbox.sections=[
 
-   /*{ name:"title", height:10, map_to:"auto", type:"campus_event_title"},*/   
+   { name:"organizer", height:20, map_to:"organizer",type:"textarea" },
 
-   { name:"organizer", height:50,map_to:"",type:"campus_organizer" },
+   { name:"description", height:50, map_to:"description", type:"textarea", focus:true },
 
-   { name:"description", height:200, map_to:"text", type:"campus_editor", focus:true },   
+   { name:"location", height:20, map_to:"location", type:"textarea"},   
 
    { name:"time", height:72, type:"time", map_to:"auto"} 
 
   ]
 
- 
 
  
 
   scheduler.config.multi_day = true;
 
   
-
   scheduler.config.xml_date="%Y-%m-%d %H:%i";
 
-  scheduler.init('scheduler_here',null,"week");
-
-  scheduler.load("/app/webroot/scripts/dhtmlxScheduler/common/events.xml");
-
-  
+  scheduler.init('scheduler_here',null,"month");
+  scheduler.load("/app/webroot/scripts/dhtmlxScheduler/allevents.php");
+  //scheduler.config.readonly = true;
 
   
-
+  scheduler.locale.labels.section_title = "title";
+  scheduler.locale.labels.section_location = "location";
+  scheduler.locale.labels.section_organizer = "organizer";
   
-
+  
+  var dp = new dataProcessor("/app/webroot/scripts/dhtmlxScheduler/allevents.php");
+  
+  dp.init(scheduler);
+  
+  
  }
  
  function show_minical(){
