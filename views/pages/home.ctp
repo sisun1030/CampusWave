@@ -193,7 +193,7 @@
 
 <div class='box'>
    What's going on this month?
-   <hr style='width:700px;position:absolute;left:20px;top:32px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
+   <hr style='width:800px;position:absolute;left:20px;top:32px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
    <div id="scheduler_here" class="dhx_cal_container" style='width:800px; height:350px; position:absolute; top:50px; left:20px;padding-bottom:30px;text-transform:none'>
 
       <div class="dhx_cal_navline">
