@@ -2,5 +2,5 @@
 	$server = "localhost";
 	$user	= "root";
 	$pass	= "";
-	$db_name= "sampleDB";
+	$db_name= "campuswa_inilaunch";
 ?>
