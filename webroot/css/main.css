@@ -52,7 +52,7 @@ body
 	{
 		position:absolute;
 		top:60px;
-		left:1160px;
+		left:1130px;
 		color:#fce753;
 		font-size:12px;
 		text-decoration:none;
@@ -147,7 +147,7 @@ a:link
 		top:137px;
 		left:2%;
 		width:1160px;
-		height:460px;
+		height:560px;
 		padding:20px;
 		background-color:white;
 		-webkit-box-shadow: 0 0 10px #000; /* Safari */
