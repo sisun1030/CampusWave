@@ -83,61 +83,106 @@
 
   }
 
-  
-
-  scheduler.form_blocks["campus_organizer"]={
-
-   render:function(sns){   
-
-    return "<label id='Organizer' style='height:50px;'>This is organizer</label><label id='name'></label>";
-
-   },
-
-   set_value:function(node,value,ev){ //this is a place holder
-
-    node.firstChild.value=value||"";
-
-    node.firstChild.disabled = ev.disabled;
-
-   }
-
-  }
 
   */
+  
+  //renders lightbox readonly if user is not creator of event
+  scheduler.form_blocks.textarea.set_value=function(node,value,ev){
+       
+	    node.firstChild.value=value||"";
+		var notOwnEvent = true;
+		
+		if(ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>)
+			notOwnEvent = false;
+		
+        node.firstChild.disabled = notOwnEvent; // or just = true; disable for all events
+    }
+	
 
-  scheduler.config.lightbox.sections=[
+	scheduler.config.lightbox.sections=[
 
-   { name:"organizer", height:20, map_to:"organizer",type:"textarea" },
+   { name:"organizer", height:20, map_to:"organizer",type:"textarea", focus:true },
 
-   { name:"description", height:50, map_to:"description", type:"textarea", focus:true },
+   { name:"description", height:50, map_to:"description", type:"textarea"},
 
    { name:"location", height:20, map_to:"location", type:"textarea"},   
 
    { name:"time", height:72, type:"time", map_to:"auto"} 
 
   ]
-
-
- 
-
-  scheduler.config.multi_day = true;
-
   
-  scheduler.config.xml_date="%Y-%m-%d %H:%i";
-
-  scheduler.init('scheduler_here',null,"month");
-  scheduler.load("/app/webroot/scripts/dhtmlxScheduler/allevents.php");
-  //scheduler.config.readonly = true;
-
-  
+    
   scheduler.locale.labels.section_title = "title";
   scheduler.locale.labels.section_location = "location";
   scheduler.locale.labels.section_organizer = "organizer";
-  
-  
-  var dp = new dataProcessor("/app/webroot/scripts/dhtmlxScheduler/allevents.php");
+
+  scheduler.config.multi_day = true;
+
+  scheduler.config.xml_date="%Y-%m-%d %H:%i";
+
+  scheduler.init('scheduler_here',null,"month");
+    
+  scheduler.load("/app/webroot/scripts/dhtmlxScheduler/allevents.php");
+ 
+  var dp = new dataProcessor("/app/webroot/scripts/dhtmlxScheduler/allevents.php?user=<?php echo $this->Session->read('Auth.User.id'); ?>");
   
   dp.init(scheduler);
+  
+  //verifies if user is creator of event
+  function allow_own(id)
+  {
+	var ev = this.getEvent(id);
+	return ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
+  }
+
+   //only allow creator to double click
+   scheduler.attachEvent("onDblClick",allow_own);
+  
+  
+   scheduler.attachEvent("onBeforeDrag", allow_own);
+   
+	//provide a limited view of icons when clicked once, if user is not the owner
+	scheduler.attachEvent("onClick", function(event_id, native_event_object){
+			
+			var event_object = this.getEvent(event_id);
+			
+			if(event_object.user_id != <?php echo $this->Session->read('Auth.User.id'); ?>)
+				scheduler.config.icons_select=["icon_details"];
+			else
+				scheduler.config.icons_select=["icon_details","icon_edit","icon_delete"];
+			
+			return true;
+   });
+ 
+	//provide a limited view of icons in lightbox if user is not the owner
+	scheduler.attachEvent("onBeforeLightbox", function(event_id) {
+			
+		var event_object = this.getEvent(event_id);
+	
+		if(event_object.user_id != <?php echo $this->Session->read('Auth.User.id'); ?>) {
+		
+			scheduler.config.buttons_left=["dhx_cancel_btn"];
+			scheduler.config.buttons_right=[];
+		}
+		else
+		{
+			scheduler.config.buttons_left=["dhx_save_btn","dhx_cancel_btn"];
+			scheduler.config.buttons_right=["dhx_delete_btn"];
+			
+		 }
+		 
+		 scheduler.resetLightbox();
+		 
+		 return true;
+	});
+
+  
+  //default properties of new event
+   scheduler.attachEvent("onEventCreated",function(id)
+   {
+      var ev = this.getEvent(id);
+	  ev.user_id = <?php echo $this->Session->read('Auth.User.id'); ?>; //just for rendering on client, will not affect server data
+   });
   
   
  }
