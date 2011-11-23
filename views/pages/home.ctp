@@ -28,64 +28,26 @@
 	<script type="text/javascript" charset="utf-8">
 
  function init() {
+ 
+ //Used only to display organizer name as default when creating event, do we want this? Might be good to limit who creates what.
+ scheduler.form_blocks["my_editor"]={
+		render:function(sns){
+			return "<div class='dhx_cal_ltext' style='height:15px;'><?php echo $this->Session->read('Auth.User.name'); ?></div>";
+		},
+		set_value:function(node,value,ev){
+			node.childNodes[1].value= value||"";
+		},
+		get_value:function(node,ev){
+			ev.location = node.childNodes[4].value;
+			return node.childNodes[1].value;
+		},
+		focus:function(node){
+			var a=node.childNodes[1]; a.select(); a.focus(); 
+		}
+	}
 
- /*
-
-  scheduler.form_blocks["campus_editor"]={
-
-   render:function(sns){
-
-    return "<div class=\"dhx_cal_ltext\" style=\"height:60px;\"><textarea rows=\"3\" cols=\"25\" readonly=\"readonly\">This is a readonly description </textarea></div>";
-
-   },
-
-   set_value:function(node,value,ev){
-
-    node.childNodes[1].value=value||"";
-
-    node.childNodes[4].value=ev.details||"";
-
-   },
-
-   get_value:function(node,ev){
-
-    ev.location = node.childNodes[4].value;
-
-    return node.childNodes[1].value;
-
-   },
-
-   focus:function(node){
-
-    var a=node.childNodes[1]; a.select(); a.focus(); 
-
-   }
-
-  }
-
-  
-
-  scheduler.form_blocks["campus_event_title"]={
-
-   render:function(sns){   
-
-    return "<div class='campus_event_title' style='height:10px;'><form><label>Title<img src='/images/title.jpg' alt='title' /> </label></form></div>";
-
-   },
-
-   set_value:function(node,value,ev){ //this is a place holder
-
-    node.firstChild.value=value||"";
-
-    node.firstChild.disabled = ev.disabled;
-
-   }
-
-  }
-
-
-  */
-  
+	
+   
   //renders lightbox readonly if user is not creator of event
   scheduler.form_blocks.textarea.set_value=function(node,value,ev){
        
@@ -100,8 +62,10 @@
 	
 
 	scheduler.config.lightbox.sections=[
+	
+   { name:"text", height:20, map_to:"text", type:"textarea"},
 
-   { name:"organizer", height:20, map_to:"organizer",type:"textarea", focus:true },
+   { name:"organizer", height:20, map_to:"organizer",type:"my_editor" },
 
    { name:"description", height:50, map_to:"description", type:"textarea"},
 
@@ -111,8 +75,8 @@
 
   ]
   
-    
-  scheduler.locale.labels.section_title = "title";
+     
+  scheduler.locale.labels.section_text = "event";
   scheduler.locale.labels.section_location = "location";
   scheduler.locale.labels.section_organizer = "organizer";
 
@@ -127,25 +91,30 @@
   var dp = new dataProcessor("/app/webroot/scripts/dhtmlxScheduler/allevents.php?user=<?php echo $this->Session->read('Auth.User.id'); ?>");
   
   dp.init(scheduler);
-  
-  //verifies if user is creator of event
-  function allow_own(id)
-  {
-	var ev = this.getEvent(id);
-	return ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
-  }
+ 
 
    //only allow creator to double click
    scheduler.attachEvent("onDblClick",allow_own);
-  
-  
-   scheduler.attachEvent("onBeforeDrag", allow_own);
+   
+    scheduler.attachEvent("onBeforeDrag", function (event_id, mode, native_event_object){
+
+		if(event_id == null)
+			return true;
+			
+		var event_object = this.getEvent(event_id);
+			
+       return event_object.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
+  });
+   
    
 	//provide a limited view of icons when clicked once, if user is not the owner
 	scheduler.attachEvent("onClick", function(event_id, native_event_object){
-			
+	
+			if(this.getState().mode == "month")
+				bubble_event_list(event_id, this);
+				
 			var event_object = this.getEvent(event_id);
-			
+		
 			if(event_object.user_id != <?php echo $this->Session->read('Auth.User.id'); ?>)
 				scheduler.config.icons_select=["icon_details"];
 			else
@@ -153,6 +122,8 @@
 			
 			return true;
    });
+   
+   
  
 	//provide a limited view of icons in lightbox if user is not the owner
 	scheduler.attachEvent("onBeforeLightbox", function(event_id) {
@@ -186,6 +157,31 @@
   
   
  }
+ 
+   //verifies if user is creator of event
+  function allow_own(id)
+  {
+	var ev = this.getEvent(id);
+	return ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
+  }
+  
+  //takes in the id of the event clicked and returns an array w/all events for that day
+  function bubble_event_list(event_id, schedulerObj)
+  {
+	var eventFullDate = "" + schedulerObj.getEventStartDate(event_id);
+	var eventDay = new Date(eventFullDate.substring(0, 15));
+	
+	var eventNextDay = new Date(eventDay);
+	eventNextDay.setDate(eventNextDay.getDate() + 1);
+	
+	var eventList = schedulerObj.getEvents(eventDay,eventNextDay);
+		
+	//to access properties just use the name assigned in the lightbox
+	//alert(eventList[0].text);
+	
+	return eventList;
+  }
+  
  
  function show_minical(){
 
