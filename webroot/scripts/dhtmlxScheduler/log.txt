@@ -1,0 +1,2568 @@
+
+
+====================================
+Log started, 03/12/2011 08:12:04
+====================================
+
+SELECT  * FROM events
+
+Done in 0.016763925552368s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:55
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0062859058380127s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:24
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0066289901733398s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:32
+====================================
+
+SELECT  * FROM events
+
+Done in 0.019053936004639s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:11
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0061850547790527s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:15
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0064868927001953s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:20
+====================================
+
+SELECT  * FROM events
+
+Done in 0.007929801940918s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:24
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0058238506317139s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:24
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0058507919311523s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:27
+====================================
+
+DataProcessor object initialized
+1322899525539_start_date => 2011-12-02 00:55
+1322899525539_end_date => 2011-12-02 02:40
+1322899525539_text => New event
+1322899525539_id => 1322899525539
+1322899525539_user_id => 45
+1322899525539_!nativeeditor_status => inserted
+ids => 1322899525539
+
+Row data [1322899525539]
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+id => 1322899525539
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-12-02 00:55','2011-12-02 02:40','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322899525539; tid:1;
+
+Done in 0.027002096176147s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:25
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0073418617248535s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:29
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0055999755859375s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:00
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0079069137573242s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:04
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0066609382629395s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:47
+====================================
+
+SELECT  * FROM events
+
+Done in 0.010823011398315s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:51
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0083670616149902s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:07
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0056781768798828s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:14
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0060620307922363s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:40
+====================================
+
+SELECT  * FROM events
+
+Done in 0.005856990814209s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:50
+====================================
+
+DataProcessor object initialized
+1322899908196_start_date => 2011-12-01 01:10
+1322899908196_end_date => 2011-12-01 03:45
+1322899908196_text => New event
+1322899908196_id => 1322899908196
+1322899908196_user_id => 45
+1322899908196_!nativeeditor_status => inserted
+ids => 1322899908196
+
+Row data [1322899908196]
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+id => 1322899908196
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-12-01 01:10','2011-12-01 03:45','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322899908196; tid:2;
+
+Done in 0.03474497795105s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:39
+====================================
+
+SELECT  * FROM events
+
+Done in 0.009303092956543s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:43
+====================================
+
+DataProcessor object initialized
+1322899961662_start_date => 2011-11-30 01:40
+1322899961662_end_date => 2011-11-30 04:05
+1322899961662_text => New event
+1322899961662_id => 1322899961662
+1322899961662_user_id => 45
+1322899961662_!nativeeditor_status => inserted
+ids => 1322899961662
+
+Row data [1322899961662]
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+id => 1322899961662
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-11-30 01:40','2011-11-30 04:05','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322899961662; tid:3;
+
+Done in 0.029921054840088s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:47
+====================================
+
+SELECT  * FROM events
+
+Done in 0.030311107635498s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:50
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0060439109802246s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:03
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0066509246826172s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:08
+====================================
+
+DataProcessor object initialized
+1322900046774_start_date => 2011-11-29 02:15
+1322900046774_end_date => 2011-11-29 04:40
+1322900046774_text => New event
+1322900046774_id => 1322900046774
+1322900046774_user_id => 45
+1322900046774_!nativeeditor_status => inserted
+ids => 1322900046774
+
+Row data [1322900046774]
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-29 02:15
+end_date => 2011-11-29 04:40
+text => New event
+id => 1322900046774
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-11-29 02:15','2011-11-29 04:40','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322900046774; tid:4;
+
+Done in 0.029033899307251s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:13
+====================================
+
+SELECT  * FROM events
+
+Done in 0.006882905960083s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:19
+====================================
+
+DataProcessor object initialized
+1_id => 1
+1_start_date => 2011-12-02 00:55
+1_end_date => 2011-12-02 02:40
+1_text => New event
+1_description => 
+1_location => 
+1_organizer => 
+1_user_id => 45
+1_category_id => 0
+1_!nativeeditor_status => deleted
+ids => 1
+
+Row data [1]
+id => 1
+start_date => 2011-12-02 00:55
+end_date => 2011-12-02 02:40
+text => New event
+description => 
+location => 
+organizer => 
+user_id => 45
+category_id => 0
+!nativeeditor_status => deleted
+
+DELETE FROM events WHERE id='1'
+
+Edit operation finished
+0 => action:deleted; sid:1; tid:1;
+
+Done in 0.020359039306641s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:22
+====================================
+
+DataProcessor object initialized
+2_id => 2
+2_start_date => 2011-12-01 01:10
+2_end_date => 2011-12-01 03:45
+2_text => New event
+2_description => 
+2_location => 
+2_organizer => 
+2_user_id => 45
+2_category_id => 0
+2_!nativeeditor_status => deleted
+ids => 2
+
+Row data [2]
+id => 2
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 03:45
+text => New event
+description => 
+location => 
+organizer => 
+user_id => 45
+category_id => 0
+!nativeeditor_status => deleted
+
+DELETE FROM events WHERE id='2'
+
+Edit operation finished
+0 => action:deleted; sid:2; tid:2;
+
+Done in 0.011531829833984s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:24
+====================================
+
+DataProcessor object initialized
+3_id => 3
+3_start_date => 2011-11-30 01:40
+3_end_date => 2011-11-30 04:05
+3_text => New event
+3_description => 
+3_location => 
+3_organizer => 
+3_user_id => 45
+3_category_id => 0
+3_!nativeeditor_status => deleted
+ids => 3
+
+Row data [3]
+id => 3
+start_date => 2011-11-30 01:40
+end_date => 2011-11-30 04:05
+text => New event
+description => 
+location => 
+organizer => 
+user_id => 45
+category_id => 0
+!nativeeditor_status => deleted
+
+DELETE FROM events WHERE id='3'
+
+Edit operation finished
+0 => action:deleted; sid:3; tid:3;
+
+Done in 0.009922981262207s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:02
+====================================
+
+SELECT  * FROM events
+
+Done in 0.005626916885376s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:06
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0052280426025391s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:51
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0091710090637207s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:53
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0070271492004395s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:13
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0056130886077881s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:22
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0090088844299316s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:25
+====================================
+
+SELECT  * FROM events
+
+Done in 0.006458044052124s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:57
+====================================
+
+SELECT  * FROM events
+
+Done in 0.012012958526611s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:06
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0062820911407471s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:21
+====================================
+
+SELECT  * FROM events
+
+Done in 0.01332688331604s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:20
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0090909004211426s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:23
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0048069953918457s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:50
+====================================
+
+SELECT event_id,start_date,end_date,event_name,details FROM events
+
+!!!Uncaught Exception
+Code: 0
+Message: MySQL operation failed
+Unknown column 'event_id' in 'field list'
+
+
+
+====================================
+Log started, 03/12/2011 10:12:54
+====================================
+
+SELECT event_id,start_date,end_date,event_name,details FROM events
+
+!!!Uncaught Exception
+Code: 0
+Message: MySQL operation failed
+Unknown column 'event_id' in 'field list'
+
+
+
+====================================
+Log started, 03/12/2011 10:12:33
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0075528621673584s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:37
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0058300495147705s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:04
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0083320140838623s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:07
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0063230991363525s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:11
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0057229995727539s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:52
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0061590671539307s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:24
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0064489841461182s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:28
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0067639350891113s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:12
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0064418315887451s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:18
+====================================
+
+DataProcessor object initialized
+1322905876501_start_date => 2011-12-03 01:50
+1322905876501_end_date => 2011-12-03 05:05
+1322905876501_text => New event
+1322905876501_id => 1322905876501
+1322905876501_user_id => 45
+1322905876501_!nativeeditor_status => inserted
+ids => 1322905876501
+
+Row data [1322905876501]
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 1322905876501
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-12-03 01:50','2011-12-03 05:05','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322905876501; tid:7;
+
+Done in 0.023321866989136s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:28
+====================================
+
+DataProcessor object initialized
+7_start_date => 2011-12-03 01:50
+7_end_date => 2011-12-03 05:05
+7_text => New event
+7_id => 7
+7_user_id => 45
+7_!nativeeditor_status => updated
+7_organizer => fdfds
+7_description => fasdfsd
+7_location => fdsf
+7_category_id => 1
+ids => 7
+
+Row data [7]
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+id => 7
+user_id => 45
+!nativeeditor_status => updated
+organizer => fdfds
+description => fasdfsd
+location => fdsf
+category_id => 1
+
+UPDATE events SET start_date='2011-12-03 01:50',end_date='2011-12-03 05:05',text='New event',description='fasdfsd',location='fdsf',organizer='fdfds',user_id='45',category_id='1' WHERE id='7'
+
+Edit operation finished
+0 => action:updated; sid:7; tid:7;
+
+Done in 0.012989044189453s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:50
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0092151165008545s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:04
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0072259902954102s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:58
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0074770450592041s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:06
+====================================
+
+SELECT  * FROM events
+
+Done in 0.006382942199707s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:56
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0064170360565186s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:59
+====================================
+
+SELECT  * FROM events
+
+Done in 0.013031005859375s
+
+
+
+====================================
+Log started, 03/12/2011 10:12:28
+====================================
+
+SELECT  * FROM events
+
+Done in 0.011475086212158s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:46
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0092101097106934s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:12
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0065019130706787s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:18
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0065450668334961s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:37
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0061688423156738s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:21
+====================================
+
+SELECT  * FROM events
+
+Done in 0.018110990524292s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:28
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0071489810943604s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:53
+====================================
+
+SELECT  * FROM events
+
+Done in 0.014436960220337s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:03
+====================================
+
+SELECT  * FROM events
+
+Done in 0.010978937149048s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:22
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0068888664245605s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:26
+====================================
+
+SELECT  * FROM events
+
+Done in 0.016197919845581s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:21
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0069808959960938s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:25
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0058040618896484s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:16
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0075719356536865s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:25
+====================================
+
+DataProcessor object initialized
+5_id => 5
+5_start_date => 2011-12-01 01:10
+5_end_date => 2011-12-01 04:20
+5_text => New event
+5_description => ffdsds
+5_location => 
+5_organizer => 
+5_user_id => 45
+5_category_id => 1
+5_!nativeeditor_status => updated
+ids => 5
+
+Row data [5]
+id => 5
+start_date => 2011-12-01 01:10
+end_date => 2011-12-01 04:20
+text => New event
+description => ffdsds
+location => 
+organizer => 
+user_id => 45
+category_id => 1
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-01 01:10',end_date='2011-12-01 04:20',text='New event',description='ffdsds',location='',organizer='',user_id='45',category_id='1' WHERE id='5'
+
+Edit operation finished
+0 => action:updated; sid:5; tid:5;
+
+Done in 0.012150049209595s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:32
+====================================
+
+DataProcessor object initialized
+1322907138553_start_date => 2011-11-30 01:50
+1322907138553_end_date => 2011-11-30 04:40
+1322907138553_text => New event
+1322907138553_id => 1322907138553
+1322907138553_user_id => 45
+1322907138553_!nativeeditor_status => inserted
+ids => 1322907138553
+
+Row data [1322907138553]
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-30 01:50
+end_date => 2011-11-30 04:40
+text => New event
+id => 1322907138553
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-11-30 01:50','2011-11-30 04:40','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322907138553; tid:8;
+
+Done in 0.017311096191406s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:56
+====================================
+
+SELECT  * FROM events
+
+Done in 0.0080788135528564s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:00
+====================================
+
+DataProcessor object initialized
+1322907298305_start_date => 2011-11-28 01:30
+1322907298305_end_date => 2011-11-28 05:15
+1322907298305_text => New event
+1322907298305_id => 1322907298305
+1322907298305_user_id => 45
+1322907298305_!nativeeditor_status => inserted
+ids => 1322907298305
+
+Row data [1322907298305]
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: description
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: location
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: organizer
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+Incorrect field name used: category_id
+
+data
+start_date => 2011-11-28 01:30
+end_date => 2011-11-28 05:15
+text => New event
+id => 1322907298305
+user_id => 45
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-11-28 01:30','2011-11-28 05:15','New event','','','','45','')
+
+Edit operation finished
+0 => action:inserted; sid:1322907298305; tid:9;
+
+Done in 0.031949043273926s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:46
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0077219009399414s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:58
+====================================
+
+DataProcessor object initialized
+1322907348690_start_date => 2011-12-08 00:00
+1322907348690_end_date => 2011-12-08 00:05
+1322907348690_text => TEsting OWWOOWW<br>
+1322907348690_id => 1322907348690
+1322907348690_user_id => 45
+1322907348690_organizer => undefined
+1322907348690_description => fdsafdsf
+1322907348690_location => fasdfasdf
+1322907348690_category_id => 1
+1322907348690_!nativeeditor_status => inserted
+ids => 1322907348690
+
+Row data [1322907348690]
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+id => 1322907348690
+user_id => 45
+organizer => undefined
+description => fdsafdsf
+location => fasdfasdf
+category_id => 1
+!nativeeditor_status => inserted
+
+INSERT INTO events(start_date,end_date,text,description,location,organizer,user_id,category_id) VALUES ('2011-12-08 00:00','2011-12-08 00:05','TEsting OWWOOWW<br>','fdsafdsf','fasdfasdf','undefined','45','1')
+
+Edit operation finished
+0 => action:inserted; sid:1322907348690; tid:10;
+
+Done in 0.026976108551025s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:41
+====================================
+
+DataProcessor object initialized
+10_start_date => 2011-12-08 00:00
+10_end_date => 2011-12-08 00:05
+10_text => TEsting OWWOOWW<br>
+10_id => 10
+10_user_id => 45
+10_organizer => undefined
+10_description => <b>fdsafdsf</b>
+10_location => fasdfasdf
+10_category_id => 1
+10_!nativeeditor_status => updated
+ids => 10
+
+Row data [10]
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+id => 10
+user_id => 45
+organizer => undefined
+description => <b>fdsafdsf</b>
+location => fasdfasdf
+category_id => 1
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-08 00:00',end_date='2011-12-08 00:05',text='TEsting OWWOOWW<br>',description='<b>fdsafdsf</b>',location='fasdfasdf',organizer='undefined',user_id='45',category_id='1' WHERE id='10'
+
+Edit operation finished
+0 => action:updated; sid:10; tid:10;
+
+Done in 0.013638019561768s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:03
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0091102123260498s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:00
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0077400207519531s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:30
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.014936923980713s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:28
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.013211011886597s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:44
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0076441764831543s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:53
+====================================
+
+DataProcessor object initialized
+10_id => 10
+10_start_date => 2011-12-08 00:00
+10_end_date => 2011-12-08 00:05
+10_text => TEsting OWWOOWW<br>
+10_description => <b>fdsafdsf</b>
+10_location => fasdfasdf
+10_organizer => undefined
+10_user_id => 45
+10_category_id => 1
+10_image => undefined
+10_!nativeeditor_status => updated
+ids => 10
+
+Row data [10]
+id => 10
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+description => <b>fdsafdsf</b>
+location => fasdfasdf
+organizer => undefined
+user_id => 45
+category_id => 1
+image => undefined
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-08 00:00',end_date='2011-12-08 00:05',text='TEsting OWWOOWW<br>',description='<b>fdsafdsf</b>',location='fasdfasdf',organizer='undefined',user_id='45',category_id='1' WHERE id='10'
+
+Edit operation finished
+0 => action:updated; sid:10; tid:10;
+
+Done in 0.011497974395752s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:02
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.013695955276489s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:44
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.007288932800293s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:01
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0074729919433594s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:27
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0083818435668945s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:22
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.013674974441528s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:49
+====================================
+
+DataProcessor object initialized
+10_id => 10
+10_start_date => 2011-12-08 00:00
+10_end_date => 2011-12-08 00:05
+10_text => TEsting OWWOOWW<br>
+10_description => <b>fdsafdsf</b>
+10_location => fasdfasdf
+10_organizer => undefined
+10_user_id => 45
+10_category_id => 1
+10_image => undefined
+10_!nativeeditor_status => updated
+ids => 10
+
+Row data [10]
+id => 10
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+description => <b>fdsafdsf</b>
+location => fasdfasdf
+organizer => undefined
+user_id => 45
+category_id => 1
+image => undefined
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-08 00:00',end_date='2011-12-08 00:05',text='TEsting OWWOOWW<br>',description='<b>fdsafdsf</b>',location='fasdfasdf',organizer='undefined',user_id='45',category_id='1' WHERE id='10'
+
+Edit operation finished
+0 => action:updated; sid:10; tid:10;
+
+Done in 0.018691062927246s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:56
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.010998964309692s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:06
+====================================
+
+DataProcessor object initialized
+10_id => 10
+10_start_date => 2011-12-08 00:00
+10_end_date => 2011-12-08 00:05
+10_text => TEsting OWWOOWW<br>
+10_description => <b>fdsafdsf</b>
+10_location => fasdfasdf
+10_organizer => undefined
+10_user_id => 45
+10_category_id => 1
+10_image => undefined
+10_!nativeeditor_status => updated
+ids => 10
+
+Row data [10]
+id => 10
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+description => <b>fdsafdsf</b>
+location => fasdfasdf
+organizer => undefined
+user_id => 45
+category_id => 1
+image => undefined
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-08 00:00',end_date='2011-12-08 00:05',text='TEsting OWWOOWW<br>',description='<b>fdsafdsf</b>',location='fasdfasdf',organizer='undefined',user_id='45',category_id='1' WHERE id='10'
+
+Edit operation finished
+0 => action:updated; sid:10; tid:10;
+
+Done in 0.01739501953125s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:21
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0093908309936523s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:03
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0088310241699219s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:23
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0094859600067139s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:52
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.014487981796265s
+
+
+
+====================================
+Log started, 03/12/2011 11:12:34
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0089478492736816s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:12
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0083341598510742s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:35
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.007990837097168s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:10
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0084500312805176s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:15
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0094449520111084s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:30
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.009519100189209s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:55
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0106360912323s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:42
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0083911418914795s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:12
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0080008506774902s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:16
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0074498653411865s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:37
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0072050094604492s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:45
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.008897066116333s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:02
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.015710115432739s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:04
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0077769756317139s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:29
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0099928379058838s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:47
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0082559585571289s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:55
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0075349807739258s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:34
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0073800086975098s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:55
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.012156009674072s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:05
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.011579036712646s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:17
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0072410106658936s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:25
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.01677417755127s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:57
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0072870254516602s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:07
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.014400005340576s
+
+
+
+====================================
+Log started, 03/12/2011 12:12:27
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0091888904571533s
+
+
+
+====================================
+Log started, 03/12/2011 01:12:10
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0081861019134521s
+
+
+
+====================================
+Log started, 03/12/2011 01:12:19
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0089972019195557s
+
+
+
+====================================
+Log started, 03/12/2011 01:12:30
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0086739063262939s
+
+
+
+====================================
+Log started, 03/12/2011 01:12:39
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.020787954330444s
+
+
+
+====================================
+Log started, 03/12/2011 01:12:47
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0091829299926758s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:03
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.010142803192139s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:30
+====================================
+
+DataProcessor object initialized
+10_id => 10
+10_start_date => 2011-12-08 00:00
+10_end_date => 2011-12-08 00:05
+10_text => TEsting OWWOOWW<br>
+10_description => <b>fdsafdsf</b>
+10_location => fasdfasdf
+10_organizer => undefined
+10_user_id => 45
+10_category_id => 1
+10_!nativeeditor_status => deleted
+ids => 10
+
+Row data [10]
+id => 10
+start_date => 2011-12-08 00:00
+end_date => 2011-12-08 00:05
+text => TEsting OWWOOWW<br>
+description => <b>fdsafdsf</b>
+location => fasdfasdf
+organizer => undefined
+user_id => 45
+category_id => 1
+!nativeeditor_status => deleted
+
+DELETE FROM events WHERE id='10'
+
+Edit operation finished
+0 => action:deleted; sid:10; tid:10;
+
+Done in 0.061728954315186s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:21
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0085370540618896s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:44
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0079619884490967s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:38
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.060389995574951s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:10
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0088891983032227s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:27
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.008145809173584s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:51
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0094020366668701s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:36
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.010088920593262s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:14
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.01344108581543s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:39
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0071971416473389s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:58
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.071938991546631s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:25
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0092988014221191s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:08
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0090329647064209s
+
+
+
+====================================
+Log started, 03/12/2011 08:12:52
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0093789100646973s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:15
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0093929767608643s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:29
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0096409320831299s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:06
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0085759162902832s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:29
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.013453960418701s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:41
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.011151790618896s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:13
+====================================
+
+SELECT id,start_date,end_date,text,description,location,organizer,user_id,category_id FROM events
+
+Done in 0.0098810195922852s
+
+
+
+====================================
+Log started, 03/12/2011 09:12:20
+====================================
+
+DataProcessor object initialized
+7_id => 7
+7_start_date => 2011-12-03 01:50
+7_end_date => 2011-12-03 05:05
+7_text => New event
+7_description => fasdfsd
+7_location => fdsf
+7_organizer => undefined
+7_user_id => 45
+7_category_id => 1
+7_!nativeeditor_status => updated
+ids => 7
+
+Row data [7]
+id => 7
+start_date => 2011-12-03 01:50
+end_date => 2011-12-03 05:05
+text => New event
+description => fasdfsd
+location => fdsf
+organizer => undefined
+user_id => 45
+category_id => 1
+!nativeeditor_status => updated
+
+UPDATE events SET start_date='2011-12-03 01:50',end_date='2011-12-03 05:05',text='New event',description='fasdfsd',location='fdsf',organizer='undefined',user_id='45',category_id='1' WHERE id='7'
+
+Edit operation finished
+0 => action:updated; sid:7; tid:7;
+
+Done in 0.013349056243896s
+

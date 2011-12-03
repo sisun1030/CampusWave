@@ -1,0 +1,64 @@
+iframe.dhxeditor_mainiframe_dhx_web {
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+td.dhxeditor_toolbar_dhx_web {
+	position: relative;
+	height: 32px;
+}
+td.dhxeditor_toolbar_dhx_web div.dhtmlxToolbar_dhx_web {
+	height: 32px !important;
+}
+div.dhxeditor_container_dhx_web {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* native lite toolbar */
+div.dhxeditor_dhx_web_btns {
+	background-image: url("../imgs/dhxeditor_dhx_web/dhxeditor_bg_lite.gif");
+	background-repeat: repeat-x;
+	position: absolute;
+	width: 100%;
+	height: 32px;
+}
+div.dhxeditor_dhx_web_btns div.verline_l,
+div.dhxeditor_dhx_web_btns div.verline_r {
+	display: none;
+}
+div.dhxeditor_dhx_web_tbbtn {
+	float: left;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	font-size: 2px;
+	margin-left: 5px;
+	margin-top: 7px;
+	cursor: pointer;
+	background-image: url("../imgs/dhxeditor_dhx_web/buttons.gif");
+}
+div.dhxeditor_dhx_web_tbbtn.btn_bold {
+	margin-left: 12px;
+	background-position: 0px 0px;
+}
+div.dhxeditor_dhx_web_tbbtn.btn_italic {
+	background-position: -18px 0px;
+}
+div.dhxeditor_dhx_web_tbbtn.btn_underline {
+	background-position: -36px 0px;
+}
+div.dhxeditor_dhx_web_tbbtn.btn_clearformat {
+	background-position: -54px 0px;
+}
+/* toolbar modif */
+div.dhtmlx_editor_extended_dhx_web .dhx_toolbar_base_dhx_web  {
+	background-image: url("../imgs/dhxeditor_dhx_web/dhxeditor_bg_lite.gif") !important;
+}
+div.dhtmlx_editor_extended_dhx_web  .dhx_toolbar_base_dhx_web div.dhx_toolbar_sep  {
+	height: 31px !important;
+}
