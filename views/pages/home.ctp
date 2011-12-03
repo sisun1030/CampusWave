@@ -1,24 +1,30 @@
 <html>
 	<?php 
+	echo $this->Html->css('main');
+	echo $this->Html->script('jquery-1.6.1');
 	
-	echo $this->Html->script('jquery');
+	
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler_editors');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler_tooltip');
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/dhtmlxscheduler');
 	echo $this->Html->script('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
 	echo $this->Html->css('/scripts/dhtmlxScheduler/codebase/ext/dhtmlxscheduler');
-	echo $this->Html->css('main');	
 	
+	echo $this->Html->css('/scripts/dhtmlxEditor/codebase/skins/dhtmlxeditor_dhx_skyblue');
+	echo $this->Html->script('/scripts/dhtmlxEditor/codebase/dhtmlxcommon');
+	echo $this->Html->script('/scripts/dhtmlxEditor/codebase/dhtmlxeditor3'); 
+	echo $this->Html->script('/scripts/dhtmlxEditor/codebase/ext/dhtmlxeditor_ext');
+	
+	echo $this->Html->css('/scripts/dhtmlxToolbar/codebase/skins/dhtmlxtoolbar_dhx_skyblue');
+	echo $this->Html->script('/scripts/dhtmlxToolbar/codebase/dhtmlxtoolbar');
 	?>
-	
 
 <div id="fb-root"></div>
 
    <script src="http://connect.facebook.net/en_US/all.js"></script>
 
    <script>
-
       FB.init({ 
 
          appId:'141843382572716', cookie:true, 
@@ -27,12 +33,35 @@
 
       });
       </script>
+	 
 
 	<script type="text/javascript" charset="utf-8">
+	
+ /* attach a submit handler to the form */
+  $("#uploadpic").submit(function(event) {
+	alert('hello');
+    /* stop form from submitting normally */
+    event.preventDefault(); 
+        
+    /* get some values from elements on the page: */
+    var $form = $( this ),
+        term = $form.find( 'input[name="add"]' ).val(),
+        url = $form.attr( 'action' );
+
+    /* Send the data using post and put the results in a div */
+    $.post( url, { s: term },
+      function( data ) {
+          var content = $( data ).find( '#content' );
+          $( "#imgResult" ).empty().append( content );
+      }
+    );
+  });
+  
 
  function init() {
  
  scheduler.templates.event_class=function(start,end,event){
+	
  
     switch (event.category_id)	//if date in past
 	{
@@ -40,14 +69,56 @@
 		 case "2" : return "cat_business";
 		 case "3" : return "cat_science_tech";
 	}
+	
+	
   }
   
+  scheduler.templates.tooltip_text = function(start,end,event) {
+	
+	return "<b>TOOOOOOOOOL</b> "+event.text+"<br/><b>Start date:</b> "+scheduler.templates.tooltip_date_format(start)+"<br/><b>End date:</b> "+scheduler.templates.tooltip_date_format(end);
+}
+  /*
+  scheduler.form_blocks["event_img"]={
+		render:function(sns){
+		
+			<?php
+					$img = "'/app/webroot/img/big/" . $this->Session->read('Upload.img') . "'";
+				?>
+
+				var upload = "<img src=<?php echo $img ?> /><form id='uploadpic' enctype='multipart/form-data' method='post' action='/index.php/uploads/display'>" +
+						 "<input id='ImageName1' type='file' name='data[Upload][Image]'>" +
+						 "<input type='submit' name='add' value='Add Image' /></form></center>";
+		
+			return upload;
+		},
+		set_value:function(node,value,ev){
+		
+			
+		
+			
+				document.getElementById('imgResult').innerHTML = upload;
+			
+			
+		},
+		get_value:function(node,ev){
+		
+			return node.innerHtml;
+		},
+		focus:function(node){
+			//var a=node.childNodes[1]; a.select(); a.focus(); 
+		}
+
+	}
+	*/
+  
+  
  //Used only to display organizer name as default when creating event, do we want this? Might be good to limit who creates what.
- scheduler.form_blocks["my_editor"]={
+ scheduler.form_blocks["event_organizer"]={
 		render:function(sns){
 			return "<div class='dhx_cal_ltext' style='height:15px;'><?php echo $this->Session->read('Auth.User.name'); ?></div>";
 		},
 		set_value:function(node,value,ev){
+		
 			//node.childNodes[1].value= value||"";
 		},
 		get_value:function(node,ev){
@@ -58,13 +129,107 @@
 			//var a=node.childNodes[1]; a.select(); a.focus(); 
 		}
 	}
+
+ scheduler.form_blocks["event_desc"]={
+		render:function(sns){
+			return "<div id='editorDesc' style='width: 100%; height: 200px; border: #a4bed4 1px solid;'></div>";
+		},
+		set_value:function(node,value,ev){
+			
+			if(allow_own(ev.id, this))
+			{
+				createEditor('editorDesc');
+
+				if(value == null)
+					value = "";
+			
+				var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+				iframe.contentWindow.document.body.innerHTML = value;
+			}
+			else
+			{
+				document.getElementById('editorDesc').innerHTML = value;
+			}
+		},
+		get_value:function(node,ev){
+		
+			//location of iframe editor value
+			var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+			return iframe.contentWindow.document.body.innerHTML;
+		},
+		focus:function(node){
+			//var a=node.childNodes[1]; a.select(); a.focus(); 
+		}
+
+	}
 	
- //verifies if user is creator of event
- function allow_own(id, schedulerObj)
- {
-	var ev = schedulerObj.getEvent(id);
-	return ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
- }
+	scheduler.form_blocks["event_name"]={
+		render:function(sns){
+			return "<div id='editorName' style='width: 100%; height: 50px; border: #a4bed4 1px solid;'></div>";
+		},
+		set_value:function(node,value,ev){
+			
+			if(allow_own(ev.id, this))
+			{
+				createEditor('editorName');
+				
+				if(value == null)
+					value = "";
+				
+				var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+				iframe.contentWindow.document.body.innerHTML = value;
+			}
+			else
+			{
+				document.getElementById('editorName').innerHTML = value;
+			}
+		},
+		get_value:function(node,ev){
+		
+			//location of iframe editor value
+			var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+			return iframe.contentWindow.document.body.innerHTML;
+		},
+		focus:function(node){
+			//var a=node.childNodes[1]; a.select(); a.focus(); 
+		}
+
+	}
+	
+	scheduler.form_blocks["event_location"]={
+		render:function(sns){
+			return "<div id='editorLocation' style='width: 100%; height: 50px; border: #a4bed4 1px solid;'></div>";
+		},
+		set_value:function(node,value,ev){
+			
+			if(allow_own(ev.id, this))
+			{
+				createEditor('editorLocation');
+				
+				if(value == null)
+					value = "";
+				
+				var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+				iframe.contentWindow.document.body.innerHTML = value;
+			}
+			else
+			{
+				document.getElementById('editorLocation').innerHTML = value;
+			}
+		},
+		get_value:function(node,ev){
+		
+			//location of iframe editor value
+			var iframe = node.childNodes[0].childNodes[1].childNodes[0];
+			return iframe.contentWindow.document.body.innerHTML;
+		},
+		focus:function(node){
+			//var a=node.childNodes[1]; a.select(); a.focus(); 
+		}
+
+	}
+	
+
 	
   //renders all textareas in lightbox readonly if user is not creator of event
   scheduler.form_blocks.textarea.set_value=function(node,value,ev){
@@ -72,7 +237,7 @@
 	    node.firstChild.value=value||"";
 		var notOwnEvent = true;
 		
-		if(ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>)
+		if(allow_own(ev.id, this))
 			notOwnEvent = false;
 		
         node.firstChild.disabled = notOwnEvent; 
@@ -84,7 +249,7 @@
 	    node.firstChild.value=value||"";
 		var notOwnEvent = true;
 		
-		if(ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>)
+		if(allow_own(ev.id, this))
 			notOwnEvent = false;
 		
         node.firstChild.disabled = notOwnEvent;
@@ -99,13 +264,15 @@
 
 	scheduler.config.lightbox.sections=[
 	
-   { name:"text", height:20, map_to:"text", type:"textarea"},
+ // { name:"image", height:20, map_to:"image", type:"event_img"},
+   
+   { name:"text", height:20, map_to:"text", type:"event_name"},
 
-   { name:"organizer", height:20, map_to:"organizer",type:"my_editor" },
+   { name:"organizer", height:20, map_to:"organizer",type:"event_organizer" },
 
-   { name:"description", height:50, map_to:"description", type:"textarea"},
+   { name:"description", height:20, map_to:"description", type:"event_desc"},
 
-   { name:"location", height:20, map_to:"location", type:"textarea" },
+   { name:"location", height:20, map_to:"location", type:"event_location" },
 
    { name:"category", options: category, map_to:"category_id", type:"select" },
 
@@ -113,6 +280,7 @@
 
   ]
   
+  //scheduler.locale.labels.section_image = "";
   scheduler.locale.labels.section_text = "event";
   scheduler.locale.labels.section_location = "location";
   scheduler.locale.labels.section_organizer = "organizer";
@@ -159,6 +327,11 @@
 			return true;
    });
    
+   scheduler.attachEvent("onMouseMove", function (event_id, native_event_object){
+   
+		
+   });
+   
    
  
 	//provide a limited view of icons in lightbox if user is not the owner
@@ -192,7 +365,17 @@
   
   
  }
-   
+ 
+
+ 
+ //verifies if user is creator of event
+ function allow_own(id, schedulerObj)
+ {
+	var ev = schedulerObj.getEvent(id);
+	return ev.user_id == <?php echo $this->Session->read('Auth.User.id'); ?>;
+ }
+
+
   //takes in the id of the event clicked and returns an array w/all events for that day
   function bubble_event_list(event_id, schedulerObj)
   {
@@ -210,7 +393,20 @@
 	return eventList;
   }
   
- 
+  function showbubble()
+  {
+		
+  }
+  
+  var editor;
+  dhtmlx.image_path = "/app/webroot/scripts/dhtmlxEditor/codebase/imgs/";
+  //creates an editor object and initializes it with saved value if present
+  function createEditor(editorName) 
+  {	
+    editor = new dhtmlXEditor(editorName);
+  }
+  
+	
  function show_minical(){
 
 		if (scheduler.isCalendarVisible())
@@ -236,14 +432,11 @@
 				}
 
 			});
-
 	}
 	
 </script>
-	
-<body onload='init()'>
+<body onload='init();'>
 <div class='header'><div class='banner'></div><div class='headerright'></div></div>
-
 <a class='log' href="/index.php/users/logout">Logout <b>></b></a>
 
 <div class='bar'><div class='barleft'></div>
@@ -258,8 +451,6 @@
 	</ul>
 	<div class='barright'></div>
 </div>
-
-
 <div class='box'>
    What's going on this month?
    <hr style='width:800px;position:absolute;left:20px;top:32px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
@@ -301,7 +492,7 @@
 	<hr style='width:350px;position:absolute;top:12px;color:#6c8395;background-color:#6c8395;border:0;height:1px;'>
 </div>
 -->
-   
+
 <div class='box_bot'>
 	<form method="">
 		Search this month's events
@@ -340,8 +531,8 @@
 <div class="footer">
 	Copyright (C) Campus Wave 2011, All right reserved.
 </div>
-
-
-
+<form id='uploadpic' enctype='multipart/form-data' method='post' action='/index.php/uploads/display'>
+						 <input id='ImageName1' type='file' name='data[Upload][Image]'> 
+						 <input type='submit' name='add' value='Add Image' /></form></center></form>
 </body>
 </html>
