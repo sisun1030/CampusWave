@@ -196,6 +196,7 @@ a:link
 		padding: 10px 0 0 0;
 	}
 
+
 .quick_start_event
 	{
 		position:relative;
@@ -233,7 +234,7 @@ a:link
 .footer
 	{
 		position:absolute;
-		top:950px;
+		top:750px;/* Change back to 950 when bot is added */
 		left:2%;
 		background-image:  url("/app/webroot/img/campus/footer.jpg");
 		height: 42px;
